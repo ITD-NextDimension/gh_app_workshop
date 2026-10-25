@@ -12,6 +12,15 @@ test("build produces a home page and four lab pages", async () => {
     }
 });
 
+test("lab time boxes total three hours", async () => {
+    const readmes = await Promise.all(["Lab1", "Lab2", "Lab3", "Lab4"].map(lab =>
+        readFile(path.join(root, lab, "README.md"), "utf8")
+    ));
+    const minutes = readmes.map(readme => Number(readme.match(/预计 \*\*(\d+) 分钟\*\*/)?.[1]));
+    assert.deepEqual(minutes, [35, 45, 45, 55]);
+    assert.equal(minutes.reduce((total, value) => total + value, 0), 180);
+});
+
 test("pages include responsive navigation, search, theme and contents", async () => {
     const html = await readFile(path.join(site, "lab-04/index.html"), "utf8");
     assert.match(html, /id="sidebar"/);

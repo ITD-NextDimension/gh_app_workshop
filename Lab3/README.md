@@ -2,7 +2,7 @@
 
 **故事：** 产品短片做完了，同事问：“微软的业务到底怎么样？”你不想把整份年报复制到聊天窗口，也不想凭模型印象回答。你要做一个像 Power BI 一样易读的经营观察室，让每个数字都能回到原文。
 
-预计 45–60 分钟。**本 Lab 保留 Power BI 风格界面**，使用 Python Copilot SDK 的**一个 Agent**分析，不使用多 Agent，不用 HyperFrames 替换界面。模型是 **GPT-6 Luna**，模式是 **Autopilot**。
+预计 **45 分钟**。**本 Lab 保留 Power BI 风格界面**，使用 Python Copilot SDK 的**一个 Agent**分析，不使用多 Agent，不用 HyperFrames 替换界面。模型是 **GPT-6 Luna**，模式是 **Autopilot**。
 
 所有命令在课程根目录执行，先激活 Python 环境。页面只是教学作品，不是 Power BI 服务，也不需要 Power BI 许可证。
 

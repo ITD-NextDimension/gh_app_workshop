@@ -6,12 +6,15 @@
 
 **这里的 Copilot 是 GitHub Copilot App，不是 Microsoft 365 Copilot。** 不要求计算机专业背景，但需要按步骤打开终端、复制命令，并核对执行结果。
 
-| Lab | 你的委托 | 新学到的 App 能力 | 交付作品 |
-|---|---|---|---|
-| [Lab 1](Lab1/README.md) | 为团队做一个中国象棋小游戏 | 本地文件夹、会话、模型、Autopilot、反馈与验证 | HTML 游戏 + Python 规则引擎 |
-| [Lab 2](Lab2/README.md) | 为 Surface 做一段产品短片 | 提供资料、Plan 审阅、切换 Autopilot、约束输出 | edge-tts 中文女声 + HyperFrames CLI 2 分钟 9:16 MP4；**不构建播放界面** |
-| [Lab 3](Lab3/README.md) | 向同事讲清微软财报 | SDK、单 Agent、来源约束、分析视图 | Power BI 风格财报页面 + Python 单 Agent |
-| [Lab 4](Lab4/README.md) | 把邮件和会议整理成本周待办 | 多 Agent 分工、Canvas 扩展、权限与持久化 | Python 工作助理 + Canvas 薄适配器 |
+**课程总时长：3 小时（180 分钟）**，四个 Lab 按 35 + 45 + 45 + 55 分钟安排。
+
+| Lab | 建议时间 | 你的委托 | 新学到的 App 能力 | 交付作品 |
+|---|---:|---|---|---|
+| [Lab 1](Lab1/README.md) | 35 分钟 | 为团队做一个中国象棋小游戏 | 本地文件夹、会话、模型、Autopilot、反馈与验证 | HTML 游戏 + Python 规则引擎 |
+| [Lab 2](Lab2/README.md) | 45 分钟 | 为 Surface 做一段产品短片 | 提供资料、Plan 审阅、切换 Autopilot、约束输出 | edge-tts 中文女声 + HyperFrames CLI 2 分钟 9:16 MP4；**不构建播放界面** |
+| [Lab 3](Lab3/README.md) | 45 分钟 | 向同事讲清微软财报 | SDK、单 Agent、来源约束、分析视图 | Power BI 风格财报页面 + Python 单 Agent |
+| [Lab 4](Lab4/README.md) | 55 分钟 | 把邮件和会议整理成本周待办 | 多 Agent 分工、Canvas 扩展、权限与持久化 | Python 工作助理 + Canvas 薄适配器 |
+| **合计** | **180 分钟（3 小时）** |  |  |  |
 
 四个 Lab 的目标模型都是 **GPT-6 Luna**，SDK 中的准确 ID 是 `gpt-6-luna`。不能用页面上写着模型名称，来代替实际模型调用证明。本课程的真实调用记录保存在各 Lab 的 `Code/` 中。
 
