@@ -1,0 +1,16 @@
+<template><style>
+@font-face{font-family:"Workshop SC";src:url("assets/NotoSansSC.ttf")}
+#root{position:absolute;inset:0;padding:192px 112px;background:radial-gradient(ellipse at 80% 70%,#30526d 0%,#101a24 65%);color:#f5f2e8;font-family:"Workshop SC",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}.eyebrow{font-size:24px;letter-spacing:7px;color:#bdcddd;margin-bottom:90px}
+h1{font-size:84px;line-height:1.2;letter-spacing:-2px;font-weight:600}.rule{height:2px;width:100%;background:#567082;margin:56px 0}
+.subtitle{font-size:42px;line-height:1.65;color:#d8e2e9}.detail{font-size:31px;line-height:1.8;color:#b9c9d5;margin-top:54px}
+.callout{display:inline-block;padding:18px 24px;border:1px solid #567082;border-radius:40px;font-size:24px;color:#c2d6e3;margin-top:58px}
+.foot{position:absolute;bottom:192px;left:112px;font-size:22px;color:#b4c5d0}
+</style><div data-composition-id="chapter-ai" data-height="1920" data-width="1080" id="root">
+<div id="chapter-content"><p class="eyebrow">产品定位</p>
+<h1 id="chapter-title">本地 AI 与 3D 图形</h1><div class="rule"></div>
+<p class="subtitle">为本地 AI 工作负载与三维图形创作而设计</p>
+<p class="detail">这里介绍产品定位，不承诺特定软件的运行速度或测试成绩。实际体验取决于应用、配置与使用方式。</p>
+<p class="callout">请以微软官网与具体应用的要求为准</p></div>
+<p class="foot">公开页面信息 · 教学示例</p></div>
+<script>const tl=gsap.timeline({paused:true});tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-ai"]=tl;</script></template>

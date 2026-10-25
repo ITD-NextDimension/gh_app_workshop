@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第一份作品 · 楚河汉界</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span class="brand">✦ COPILOT HOL / 01</span>
+    <span>从一句话，到第一份作品</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">THE FIRST MOVE</p>
+      <h1>落子，<br>让想法成真。</h1>
+      <p class="lead">不必先学会编程。<br>把你想要的游戏，说给 Copilot 听。</p>
+      <div class="status"><i></i><span id="status" role="status">正在连接 Python 棋局…</span></div>
+      <div class="controls">
+        <button id="undo" type="button">悔一步</button>
+        <button id="reset" type="button">重新开局</button>
+      </div>
+      <article>
+        <b>给第一次下棋的你</b>
+        <p>红方先行。点棋子，再点绿色落点。<br>马走日，象走田，炮隔一子才能吃子。</p>
+        <p>双人同屏 · Python 规则引擎<br>支持将军、将死、困毙与悔棋</p>
+      </article>
+      <p id="error" role="alert"></p>
+      <footer>LAB 01 · AUTOPILOT + GPT-6 LUNA<br>此标记为课程目标，不是模型运行证明</footer>
+    </section>
+    <section class="board-wrap">
+      <div class="board-title"><span>中国象棋</span><small>CHINESE CHESS</small></div>
+      <div id="board" role="group" aria-label="中国象棋棋盘"></div>
+      <div class="legend">楚 河 &nbsp;&nbsp; / &nbsp;&nbsp; 汉 界</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

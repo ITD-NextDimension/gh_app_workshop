@@ -1,0 +1,409 @@
+{
+  "plan": {
+    "story": "以产品亮相开场，依次介绍本地 AI 与 3D 图形、15 英寸触控屏、触控创作、接口，以及维修指引与可升级存储。采用竖屏画面，相关功能与可用性表述以官网信息为准。",
+    "scenes": [
+      "产品亮相",
+      "本地 AI 与 3D 图形",
+      "15 英寸触控屏",
+      "触控创作",
+      "丰富接口",
+      "维修指引与可升级存储"
+    ],
+    "checks": [
+      "总时长 2 分钟，共 6 个镜头，每镜头 20 秒",
+      "画幅 1080×1920，帧率 30fps",
+      "镜头顺序符合要求；标题不含时间码且每项不超过 16 字",
+      "仅使用给定官网事实；不添加价格、性能或续航数字",
+      "说明可升级存储与维修指引的可用性因市场而异"
+    ]
+  },
+  "plan_trace": {
+    "role": "video-planner",
+    "model": "gpt-6-luna",
+    "mode": "plan",
+    "session_id": "3a1ea12e-660c-43e7-8161-f56077735a63",
+    "timestamp": "2026-10-25T12:23:28.319264+00:00",
+    "events": [
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_TOOLS_UPDATED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MODE_NOTICE_DELIVERED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.USER_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SYSTEM_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_USAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINISHED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_REASONING",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_END",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_CHECKPOINT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_SHUTDOWN",
+        "agent_id": null
+      }
+    ],
+    "permissions": "No shell, browser, file or subagent tools. task_complete only."
+  },
+  "execution": {
+    "story": "从产品亮相开始，依次介绍本地 AI 与 3D 图形、触控显示屏、触控操作、接口，以及维修指引和可升级存储；只陈述已提供的官网信息。",
+    "scenes": [
+      "产品亮相",
+      "本地 AI 与 3D 图形",
+      "15 英寸触控屏",
+      "触控创作",
+      "丰富接口",
+      "维修指引与可升级存储"
+    ],
+    "narration": [
+      "先从整体认识这款 Surface Laptop Ultra。接下来，我们会依次看看它涉及的本地 AI 与 3D 图形、触控显示屏、接口，以及维修指引和可升级存储。以下只介绍已提供的官网信息，具体功能与配置可能因市场而异。",
+      "官网列出的用途包括本地 AI 工作负载和 3D 图形。这两项都是产品资料提到的方向；这里仅转述这些信息，不延伸成速度、性能或效果承诺。相关功能与配置可能因市场而异，具体以当地产品信息为准。",
+      "屏幕方面，已知信息是配备 15 英寸触控显示屏。我们可以明确介绍它的尺寸和触控特性；至于分辨率、显示技术或其他参数，给定资料没有说明，这里不作补充。具体配置可能因市场而异。",
+      "触控也是这一段的重点：已知信息确认这款设备配备 15 英寸触控显示屏。我们不进一步假设它支持哪些绘图工具、手写笔或创作软件；相关功能与配置可能因市场而异。",
+      "接口方面，资料明确列出三个 USB-C 接口，另外还有 USB-A、HDMI、SD 卡读卡器和耳机插孔。这里不为后几类接口补充数量，也不推测其他连接能力；具体配置可能因市场而异。",
+      "维护方面，官网信息提到维修指引与可升级存储。不过，这两项的可用性会因市场而异，不能假定每个地区或配置都相同。这里不补充拆修步骤或升级规格，请以当地产品信息为准。"
+    ],
+    "checks": [
+      "共 6 个镜头标题，均不超过 16 字；口播按镜头顺序对应，共 6 段。",
+      "仅使用给定官网事实；未添加价格、性能、续航、分辨率或未提供的功能。",
+      "明确三个 USB-C 接口；未为 USB-A、HDMI、SD 卡读卡器或耳机插孔补充数量。",
+      "说明功能、配置及维修指引与可升级存储的可用性可能因市场而异。"
+    ]
+  },
+  "trace": {
+    "role": "video-producer",
+    "model": "gpt-6-luna",
+    "mode": "autopilot",
+    "session_id": "986dd833-1dcc-4b1f-9a87-8c9d3448dfe4",
+    "timestamp": "2026-10-25T12:23:55.514963+00:00",
+    "events": [
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_TOOLS_UPDATED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MODE_NOTICE_DELIVERED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.USER_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SYSTEM_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_USAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINISHED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_REASONING",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_REASONING",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_REASONING",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_END",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_CHECKPOINT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_SHUTDOWN",
+        "agent_id": null
+      }
+    ],
+    "permissions": "No shell, browser, file or subagent tools. task_complete only."
+  }
+}

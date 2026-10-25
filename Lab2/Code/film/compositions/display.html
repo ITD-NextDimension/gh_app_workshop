@@ -1,0 +1,15 @@
+<template><style>
+@font-face{font-family:"Workshop SC";src:url("assets/NotoSansSC.ttf")}
+#root{position:absolute;inset:0;padding:192px 112px;background:radial-gradient(ellipse at 80% 70%,#30526d 0%,#101a24 65%);color:#f5f2e8;font-family:"Workshop SC",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}.eyebrow{font-size:24px;letter-spacing:7px;color:#bdcddd;margin-bottom:72px}
+.number{font-size:220px;color:#b5d4e7;line-height:1.1;margin-top:62px}.number span{font-size:44px}
+h2{font-size:82px;line-height:1.25;margin-top:45px;letter-spacing:-2px}.subtitle{font-size:32px;line-height:1.8;color:#c5d1db;margin-top:34px}
+.badge{display:inline-block;padding:14px 20px;border:1px solid #567082;border-radius:40px;font-size:23px;color:#c2d6e3;margin-top:50px}
+.foot{position:absolute;bottom:192px;left:112px;font-size:22px;line-height:1.8;color:#b4c5d0}
+</style><div id="root" data-composition-id="display" data-width="1080" data-height="1920"
+data-composition-variables='[{"id":"headline","type":"string","label":"标题","default":"15英寸触控屏"}]'>
+<div id="display-content"><p class="eyebrow">SPACE TO CREATE</p><div class="number">15<span>英寸</span></div>
+<h2 id="display-title" data-var-text="headline">15英寸触控屏</h2><p class="subtitle">触控显示屏<br>更直观地浏览、标记与创作</p>
+<div class="badge">本地 AI 工作负载 · 3D 图形</div></div>
+<p class="foot">功能和配置因市场而异<br>未作性能、价格或续航承诺</p></div>
+<script>const tl=gsap.timeline({paused:true});tl.fromTo("#display-content",{opacity:0,y:45},{opacity:1,y:0,duration:.8,ease:"power3.out"},0);window.__timelines.display=tl;</script></template>

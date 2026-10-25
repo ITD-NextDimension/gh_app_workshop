@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>真实 Canvas 插件：注册在运行时，业务在 Python</title><style>
+body{margin:0;background:#f4f6fa;font:16px/1.8 system-ui,sans-serif;color:#243345}
+main{max-width:1100px;margin:50px auto;padding:35px}
+header{font-size:12px;letter-spacing:2px;color:#647a91}h1{font-size:38px;line-height:1.4}
+.badge{background:#e5edf5;color:#45627f;padding:10px 18px;border-radius:8px}
+section{background:white;padding:25px;border:1px solid #dde5ed;border-radius:12px;margin:24px 0}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 ui-monospace,monospace}
+small{color:#7a8997}h2{font-size:18px}
+</style><main><header>COPILOT HOL / LAB4 / REAL EXECUTION RECORD</header><h1>真实 Canvas 插件：注册在运行时，业务在 Python</h1><div class="badge">真实运行记录的浏览器视图 · 不是 Copilot App 原生界面截图</div><section><h2>验证范围</h2><pre>Real scaffold-derived extension loaded in SDK runtime; NOT App native UI screenshot</pre></section><section><h2>extensions_reload / list / inspect 实际结果</h2><pre>`hol-weekboard` loaded successfully and is running (PID 20333). The inspection log ends with `=== ready ===`.</pre></section><section><h2>运行时发现的声明</h2><pre>{
+  &quot;canvases&quot;: [
+    {
+      &quot;canvas_id&quot;: &quot;hol-weekboard&quot;,
+      &quot;description&quot;: &quot;展示 Python 多 Agent 生成的虚构练习待办，并保存本地完成状态。&quot;,
+      &quot;display_name&quot;: &quot;每周行动清单&quot;,
+      &quot;extension_id&quot;: &quot;session:hol-weekboard&quot;,
+      &quot;actions&quot;: [
+        {
+          &quot;name&quot;: &quot;complete&quot;,
+          &quot;description&quot;: &quot;设置一项本地待办的完成状态，不修改 Outlook。&quot;,
+          &quot;input_schema&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+              },
+              &quot;done&quot;: {
+                &quot;type&quot;: &quot;boolean&quot;
+              }
+            },
+            &quot;required&quot;: [
+              &quot;id&quot;,
+              &quot;done&quot;
+            ],
+            &quot;additionalProperties&quot;: false
+          }
+        }
+      ],
+      &quot;extension_name&quot;: &quot;hol-weekboard&quot;,
+      &quot;icon&quot;: null,
+      &quot;input_schema&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;document_id&quot;: {
+            &quot;const&quot;: &quot;weekly-demo&quot;
+          }
+        },
+        &quot;required&quot;: [
+          &quot;document_id&quot;
+        ],
+        &quot;additionalProperties&quot;: false
+      }
+    }
+  ]
+}</pre></section><section><h2>真实通过项</h2><pre>[
+  &quot;extensions_reload/list/inspect&quot;,
+  &quot;real extension discovery&quot;,
+  &quot;open -&gt; Python loopback renderer&quot;,
+  &quot;action -&gt; Python persisted state&quot;,
+  &quot;close/reopen x3: persisted state and stable shared Python bridge&quot;
+]</pre></section><section><h2>仍需现场验收</h2><pre>同一份扩展在 Copilot App 原生侧栏的展示和实机截图。
+真实 Outlook 的匿名化分支另见 outlook-live.json；私人原件不公开。</pre></section><small>本页是运行记录，不是 App 原生画面。真实 App 设置与计划批准另有截图；原生自定义 Canvas 仍待验收。私人原件不在本页展示。</small></main></html>

@@ -1,0 +1,166 @@
+{
+  "role": "xiangqi-page-builder",
+  "model": "gpt-6-luna",
+  "mode": "autopilot",
+  "session_id": "8490200a-8a13-4c97-b8c1-d3525d9ae352",
+  "timestamp": "2026-10-25T11:14:56.997108+00:00",
+  "events": [
+    {
+      "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_INFO",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_TOOLS_UPDATED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_MODE_NOTICE_DELIVERED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.USER_MESSAGE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SYSTEM_MESSAGE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_TURN_START",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_USAGE_INFO",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.MODEL_CALL_START",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_USAGE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.MODEL_CALL_FINISHED",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_MESSAGE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_REASONING",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_TURN_END",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.UNKNOWN",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_USAGE_CHECKPOINT",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.ASSISTANT_IDLE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_IDLE",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_SHUTDOWN",
+      "agent_id": null
+    }
+  ],
+  "permissions": "No shell, browser, file or subagent tools. task_complete only."
+}

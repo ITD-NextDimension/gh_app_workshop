@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.playwright-mcp/
+node_modules/
+.hyperframes/
+**/private/
+**/live-input.json
+**/live-result.json
+**/.auth/
+.DS_Store
+pip.conf
+_site/
+verification/
+Lab4/screenshots/02-outlook-sign-in.png
+Lab4/screenshots/09-live-validation.png
+Lab4/Code/output/live-evidence.html

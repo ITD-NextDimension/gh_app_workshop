@@ -1,0 +1,16 @@
+<template><style>
+@font-face{font-family:"Workshop SC";src:url("assets/NotoSansSC.ttf")}
+#root{position:absolute;inset:0;padding:192px 112px;background:radial-gradient(ellipse at 80% 70%,#30526d 0%,#101a24 65%);color:#f5f2e8;font-family:"Workshop SC",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}.eyebrow{font-size:24px;letter-spacing:7px;color:#bdcddd;margin-bottom:90px}
+h1{font-size:84px;line-height:1.2;letter-spacing:-2px;font-weight:600}.rule{height:2px;width:100%;background:#567082;margin:56px 0}
+.subtitle{font-size:42px;line-height:1.65;color:#d8e2e9}.detail{font-size:31px;line-height:1.8;color:#b9c9d5;margin-top:54px}
+.callout{display:inline-block;padding:18px 24px;border:1px solid #567082;border-radius:40px;font-size:24px;color:#c2d6e3;margin-top:58px}
+.foot{position:absolute;bottom:192px;left:112px;font-size:22px;color:#b4c5d0}
+</style><div data-composition-id="chapter-workflow" data-height="1920" data-width="1080" id="root">
+<div id="chapter-content"><p class="eyebrow">触控与创作</p>
+<h1 id="chapter-title">触控创作</h1><div class="rule"></div>
+<p class="subtitle">触控显示屏让浏览与内容标记更直观</p>
+<p class="detail">在支持触控的应用中，你可以直接点按、浏览和标记内容，再按自己的习惯继续创作。</p>
+<p class="callout">可用功能取决于应用支持</p></div>
+<p class="foot">15 英寸触控显示屏 · 信息来自微软官网</p></div>
+<script>const tl=gsap.timeline({paused:true});tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-workflow"]=tl;</script></template>

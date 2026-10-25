@@ -1,0 +1,4 @@
+GSAP 3.14.2 is a third-party dependency.
+The original copyright and license link are retained in gsap.min.js.
+License terms: https://gsap.com/standard-license/
+Do not assume the workshop grants additional rights to this dependency.

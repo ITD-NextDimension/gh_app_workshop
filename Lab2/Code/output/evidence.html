@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 2 · 视频运行与验收证据</title>
+<style>
+body{margin:0;background:#f4f6fa;color:#243345;font:16px/1.7 system-ui,sans-serif}
+main{max-width:1100px;margin:40px auto;padding:24px}
+section{background:#fff;border:1px solid #dde5ed;border-radius:12px;margin:20px 0;padding:24px}
+h1{line-height:1.3}h2{font-size:20px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #dde5ed;padding:8px;text-align:left}
+.scenes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+figure{margin:0}img{display:block;width:100%;height:auto;border-radius:8px}
+figcaption{padding:8px 0;color:#526579}
+code{overflow-wrap:anywhere}
+</style>
+<main>
+<header>课程实验 / Lab 2 / 实际 MP4 验收</header>
+<h1>两分钟中文女声产品介绍</h1>
+<p>此页记录实际导出的 MP4 规格，并展示从最终视频文件解码的六个镜头截图；不以 HTML 预览代替成片。</p>
+<section>
+<h2>真实视频与音轨规格</h2>
+<table>
+<tr><th>项目</th><th>实测值</th><th>结果</th></tr>
+<tr><td>视频</td><td>H.264 · 1080×1920 · 30fps · 3600 帧 · 120 秒</td><td>通过</td></tr>
+<tr><td>音轨</td><td>AAC · 120 秒；edge-tts 原始 MP3 为 119.256 秒</td><td>通过</td></tr>
+<tr><td>语音</td><td><code>zh-CN-XiaoxiaoNeural</code> 普通话女声</td><td>通过</td></tr>
+<tr><td>HyperFrames</td><td>0.8.171 · lint、runtime、layout、contrast 检查通过</td><td>通过</td></tr>
+<tr><td>完整解码</td><td>FFmpeg 全片解码，无错误</td><td>通过</td></tr>
+</table>
+<p><a href="../film/output/surface-ultra.mp4">最终视频</a> ·
+<a href="../film/output/ffprobe.json">ffprobe 结果</a> ·
+<a href="../film/assets/narration.mp3">edge-tts 旁白音频</a> ·
+<a href="../film/assets/narration.srt">字幕</a> ·
+<a href="../data/story.json">Plan 与 Autopilot 记录</a></p>
+</section>
+<section>
+<h2>从最终 MP4 解码的镜头截图</h2>
+<div class="scenes">
+<figure><img src="../../screenshots/04-video-opening.png" alt="产品亮相"><figcaption>00:10 · 产品亮相</figcaption></figure>
+<figure><img src="../../screenshots/05-video-ai.png" alt="本地 AI 与 3D 图形"><figcaption>00:30 · 本地 AI 与 3D 图形</figcaption></figure>
+<figure><img src="../../screenshots/06-video-display.png" alt="15 英寸触控屏"><figcaption>00:50 · 15 英寸触控屏</figcaption></figure>
+<figure><img src="../../screenshots/07-video-workflow.png" alt="触控创作"><figcaption>01:10 · 触控创作</figcaption></figure>
+<figure><img src="../../screenshots/08-video-ports.png" alt="丰富接口"><figcaption>01:30 · 丰富接口</figcaption></figure>
+<figure><img src="../../screenshots/09-video-repair.png" alt="维修指引与可升级存储"><figcaption>01:50 · 维修指引与可升级存储</figcaption></figure>
+</div>
+</section>
+<small>视频内容基于公开官网资料；产品图为 Microsoft 官网素材，不代表开源授权。</small>
+</main>
+</html>

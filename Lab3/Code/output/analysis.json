@@ -1,0 +1,188 @@
+{
+  "title": "微软 FY2025 财报：3 条观察",
+  "findings": [
+    {
+      "heading": "营收同比增长约 14.9%",
+      "explanation": "Revenue 从 FY2024 的 245,122 增至 FY2025 的 281,724（百万美元）；同比增幅 = (281,724 − 245,122) ÷ 245,122 ≈ 14.9%。",
+      "metric": "Revenue"
+    },
+    {
+      "heading": "营业利润增速快于营收",
+      "explanation": "Operating income 从 109,433 增至 128,528（百万美元），增幅 = (128,528 − 109,433) ÷ 109,433 ≈ 17.4%；相比之下，Revenue 增幅约 14.9%。",
+      "metric": "Operating income"
+    },
+    {
+      "heading": "营业利润率约提高 1.0 个百分点",
+      "explanation": "营业利润率按 Operating income ÷ Revenue 计算：FY2025 为 128,528 ÷ 281,724 ≈ 45.6%，FY2024 为 109,433 ÷ 245,122 ≈ 44.6%；两者相差约 1.0 个百分点。这是利润相对于营收的比例，不是利润金额。",
+      "metric": "Operating income"
+    }
+  ],
+  "caveat": "FY2025 指截至 2025 年 6 月 30 日的财年，并非自然年；金额单位为百万美元。",
+  "trace": {
+    "role": "single-financial-analyst",
+    "model": "gpt-6-luna",
+    "mode": "autopilot",
+    "session_id": "6210ed59-2bc4-4cbe-8149-da25cfd6706b",
+    "timestamp": "2026-10-25T12:37:25.889790+00:00",
+    "events": [
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_TOOLS_UPDATED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MODE_NOTICE_DELIVERED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.USER_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SYSTEM_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_INFO",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_START",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_USAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINISHED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_MESSAGE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_REASONING",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_TURN_END",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_USAGE_CHECKPOINT",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.ASSISTANT_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_IDLE",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_SHUTDOWN",
+        "agent_id": null
+      }
+    ],
+    "permissions": "No shell, browser, file or subagent tools. task_complete only."
+  },
+  "source": "https://www.microsoft.com/investor/reports/ar25/index.html"
+}

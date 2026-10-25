@@ -1,0 +1,12 @@
+{
+  "name": "hol-ghc-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "test": "node --test scripts/site.test.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.12"
+  }
+}
