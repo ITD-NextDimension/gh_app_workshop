@@ -5,6 +5,7 @@ const sidebar = document.querySelector("#sidebar");
 const overlay = document.querySelector("#sidebar-overlay");
 const themeToggle = document.querySelector("#theme-toggle");
 const scrollTop = document.querySelector("#scroll-top");
+const traditional = document.documentElement.lang === "zh-TW";
 
 function closeMenu() {
     sidebar.classList.remove("open");
@@ -27,7 +28,9 @@ themeToggle.addEventListener("click", () => {
     const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("hol-theme", theme);
-    themeToggle.setAttribute("aria-label", theme === "dark" ? "切换浅色主题" : "切换深色主题");
+    themeToggle.setAttribute("aria-label", traditional
+        ? (theme === "dark" ? "切換淺色主題" : "切換深色主題")
+        : (theme === "dark" ? "切换浅色主题" : "切换深色主题"));
 });
 
 function renderSearch(query) {
@@ -43,7 +46,7 @@ function renderSearch(query) {
     if (!matches.length) {
         const empty = document.createElement("span");
         empty.className = "search-empty";
-        empty.textContent = "没有匹配的课程内容";
+        empty.textContent = traditional ? "沒有符合的課程內容" : "没有匹配的课程内容";
         searchResults.append(empty);
     } else {
         for (const page of matches) {

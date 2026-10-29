@@ -1,5 +1,7 @@
 # Lab 3 · 经营观察室：让一个 Agent 讲清一份财报
 
+[简体中文](README.md) | [繁體中文](README.traditional.md)
+
 **故事：** 产品短片做完了，同事问：“微软的业务到底怎么样？”你不想把整份年报复制到聊天窗口，也不想凭模型印象回答。你要做一个像 Power BI 一样易读的经营观察室，让每个数字都能回到原文。
 
 预计 **45 分钟**。**本 Lab 保留 Power BI 风格界面**，使用 Python Copilot SDK 的**一个 Agent**分析，不使用多 Agent，不用 HyperFrames 替换界面。模型是 **GPT-6 Luna**，模式是 **Autopilot**。
