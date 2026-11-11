@@ -15,6 +15,8 @@ VOICE = "zh-CN-XiaoxiaoNeural"
 NARRATION = ROOT / "data/narration.txt"
 VOICEOVER = FILM / "assets/narration.mp3"
 HERO = "https://images.ctfassets.net/jy9s7k22hbg4/2FXwQdsQVLy6ZRGfq09eLX/39d4e78d90dcc0e476865ec371da68fb/SLU_Hero_Desktop_Poster__1_.jpg"
+SERVICEABILITY = "https://images.ctfassets.net/jy9s7k22hbg4/3DixSEZZgkEs60Sfd7upM/34f71bba22e8999bab7470a3b3bbb3e1/SLU_600_Serviceability_Poster__2_.jpg"
+PRODUCT_PAGE = "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra"
 
 
 def prepare():
@@ -48,6 +50,17 @@ def prepare():
                     raise ValueError(f"章节模板缺少变量占位符：{variable}")
                 target.string = value
                 target.attrs.pop("data-var-text", None)
+            if name == "repair":
+                image = composition_soup.new_tag(
+                    "img",
+                    src="assets/serviceability.jpg",
+                    alt="Microsoft Surface Laptop Ultra 官方维修与内部结构图片",
+                )
+                image["style"] = (
+                    "display:block;width:100%;height:300px;object-fit:cover;"
+                    "border-radius:16px;margin-top:28px"
+                )
+                composition_soup.select_one(".subtitle").insert_after(image)
             composition_root.attrs.pop("data-composition-variables", None)
             script = composition_soup.select_one("script")
             script.string = script.string.replace(
@@ -62,9 +75,15 @@ def prepare():
             values["headline"] = title
             element["data-variable-values"] = json.dumps(values, ensure_ascii=False)
     index.write_text(str(soup))
-    with urllib.request.urlopen(HERO, timeout=60) as response:
-        image = response.read()
-    (assets / "surface-hero.jpg").write_bytes(image)
+    image_sources = {}
+    for filename, url in {
+        "surface-hero.jpg": HERO,
+        "serviceability.jpg": SERVICEABILITY,
+    }.items():
+        with urllib.request.urlopen(url, timeout=60) as response:
+            image = response.read()
+        (assets / filename).write_bytes(image)
+        image_sources[filename] = {"url": url, "sha256": hashlib.sha256(image).hexdigest()}
     shutil.copyfile(ROOT / "node_modules/gsap/dist/gsap.min.js", assets / "gsap.min.js")
     for filename, url in {
         "NotoSansSC.ttf": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
@@ -74,11 +93,12 @@ def prepare():
             with urllib.request.urlopen(url, timeout=120) as response:
                 (assets / filename).write_bytes(response.read())
     (assets / "source.json").write_text(json.dumps({
-        "url": HERO, "page": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
-        "sha256": hashlib.sha256(image).hexdigest(),
-        "rights": "Microsoft product image; educational reference only. Not an open-source asset license.",
-    }, indent=2))
-    print("官网产品图已保存，未使用 AI 绘制的假产品图。")
+        "page": PRODUCT_PAGE,
+        "page_provenance": json.loads((ROOT / "data/source.json").read_text()),
+        "assets": image_sources,
+        "rights": "Microsoft product imagery. Educational reference only; not an open-source asset license.",
+    }, ensure_ascii=False, indent=2))
+    print("已保存微软官网产品图与维修图片，并记录来源及 SHA-256；未使用 AI 绘制的假产品图。")
 
 
 def voice():
@@ -89,7 +109,7 @@ def voice():
         sys.executable, "-m", "edge_tts",
         "--file", str(NARRATION),
         "--voice", VOICE,
-        "--rate=-5%",
+        "--rate=+0%",
         "--write-media", str(VOICEOVER),
         "--write-subtitles", str(FILM / "assets/narration.srt"),
     ], check=True)

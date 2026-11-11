@@ -2,43 +2,27 @@
   "role": "xiangqi-page-builder",
   "model": "gpt-6-luna",
   "mode": "autopilot",
-  "session_id": "8490200a-8a13-4c97-b8c1-d3525d9ae352",
-  "timestamp": "2026-10-25T11:14:56.997108+00:00",
+  "session_id": "db326b22-041e-4dde-ad5e-b552e09c82fb",
+  "timestamp": "2026-10-25T23:10:11.826304+00:00",
   "events": [
     {
       "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
       "agent_id": null
     },
     {
-      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-      "agent_id": null
-    },
-    {
-      "type": "SessionEventType.UNKNOWN",
-      "agent_id": null
-    },
-    {
-      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-      "agent_id": null
-    },
-    {
-      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-      "agent_id": null
-    },
-    {
       "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
       "agent_id": null
     },
     {
-      "type": "SessionEventType.UNKNOWN",
-      "agent_id": null
-    },
-    {
       "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
       "agent_id": null
     },
     {
-      "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+      "type": "SessionEventType.SESSION_INDEXED_SEARCH",
+      "agent_id": null
+    },
+    {
+      "type": "SessionEventType.SESSION_INDEXED_SEARCH",
       "agent_id": null
     },
     {

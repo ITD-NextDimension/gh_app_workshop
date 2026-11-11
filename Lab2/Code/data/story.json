@@ -1,63 +1,39 @@
 {
   "plan": {
-    "story": "以产品亮相开场，依次介绍本地 AI 与 3D 图形、15 英寸触控屏、触控创作、接口，以及维修指引与可升级存储。采用竖屏画面，相关功能与可用性表述以官网信息为准。",
+    "story": "制作一段 2 分钟的竖屏产品介绍，画幅 1080×1920，30fps，共 6 个镜头、每个 20 秒。开场说明 Surface Laptop Ultra 为预发布产品，功能可能变化并因国家或地区而异。依次介绍本地 AI 工作流与 3D 图形、15 英寸触控屏的直接操作（缩放、标注、滚动、签名和导航；仅针对触控优化，不支持笔输入）、精密触觉触控板与内置磁吸 USB-C 充电口、接口（3 个 USB-C、USB-A、HDMI、SD 卡读卡器和耳机插孔），以及内部维修指引、已发布的维修指南、替换零件与可升级存储。结尾再次说明预发布状态及功能和替换组件、服务选项的地区与时间差异。",
     "scenes": [
-      "产品亮相",
-      "本地 AI 与 3D 图形",
-      "15 英寸触控屏",
-      "触控创作",
-      "丰富接口",
+      "产品开场",
+      "本地AI与3D图形",
+      "15英寸触控屏",
+      "触觉触控板与磁吸充电",
+      "接口一览",
       "维修指引与可升级存储"
     ],
     "checks": [
-      "总时长 2 分钟，共 6 个镜头，每镜头 20 秒",
-      "画幅 1080×1920，帧率 30fps",
-      "镜头顺序符合要求；标题不含时间码且每项不超过 16 字",
-      "仅使用给定官网事实；不添加价格、性能或续航数字",
-      "说明可升级存储与维修指引的可用性因市场而异"
+      "总时长 2 分钟；6 个镜头各 20 秒；1080×1920、30fps。",
+      "镜头顺序符合指定主题；每项仅为中文画面标题且不超过 16 字，无时间码。",
+      "开场与结尾均提及预发布状态及国家或地区差异。",
+      "内容仅使用给定官网事实；明确触屏不支持笔输入。",
+      "不添加价格、续航、性能数字或未提供的规格；不虚构接口数量或位置，也不将影片描述为微软官方广告。"
     ]
   },
   "plan_trace": {
     "role": "video-planner",
     "model": "gpt-6-luna",
     "mode": "plan",
-    "session_id": "3a1ea12e-660c-43e7-8161-f56077735a63",
-    "timestamp": "2026-10-25T12:23:28.319264+00:00",
+    "session_id": "a3e4412c-0a75-446e-96e8-2b83a15932a5",
+    "timestamp": "2026-10-26T00:16:14.123483+00:00",
     "events": [
       {
         "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
         "agent_id": null
       },
       {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
         "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
         "agent_id": null
       },
       {
         "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
         "agent_id": null
       },
       {
@@ -184,67 +160,48 @@
     "permissions": "No shell, browser, file or subagent tools. task_complete only."
   },
   "execution": {
-    "story": "从产品亮相开始，依次介绍本地 AI 与 3D 图形、触控显示屏、触控操作、接口，以及维修指引和可升级存储；只陈述已提供的官网信息。",
+    "story": "约两分钟的普通话产品介绍，按六个镜头依次介绍微软官网所列的产品特点；不呈现为微软官方广告。",
     "scenes": [
-      "产品亮相",
-      "本地 AI 与 3D 图形",
-      "15 英寸触控屏",
-      "触控创作",
-      "丰富接口",
+      "产品开场",
+      "本地AI与3D图形",
+      "15英寸触控屏",
+      "触觉触控板与磁吸充电",
+      "接口一览",
       "维修指引与可升级存储"
     ],
     "narration": [
-      "先从整体认识这款 Surface Laptop Ultra。接下来，我们会依次看看它涉及的本地 AI 与 3D 图形、触控显示屏、接口，以及维修指引和可升级存储。以下只介绍已提供的官网信息，具体功能与配置可能因市场而异。",
-      "官网列出的用途包括本地 AI 工作负载和 3D 图形。这两项都是产品资料提到的方向；这里仅转述这些信息，不延伸成速度、性能或效果承诺。相关功能与配置可能因市场而异，具体以当地产品信息为准。",
-      "屏幕方面，已知信息是配备 15 英寸触控显示屏。我们可以明确介绍它的尺寸和触控特性；至于分辨率、显示技术或其他参数，给定资料没有说明，这里不作补充。具体配置可能因市场而异。",
-      "触控也是这一段的重点：已知信息确认这款设备配备 15 英寸触控显示屏。我们不进一步假设它支持哪些绘图工具、手写笔或创作软件；相关功能与配置可能因市场而异。",
-      "接口方面，资料明确列出三个 USB-C 接口，另外还有 USB-A、HDMI、SD 卡读卡器和耳机插孔。这里不为后几类接口补充数量，也不推测其他连接能力；具体配置可能因市场而异。",
-      "维护方面，官网信息提到维修指引与可升级存储。不过，这两项的可用性会因市场而异，不能假定每个地区或配置都相同。这里不补充拆修步骤或升级规格，请以当地产品信息为准。"
+      "今天介绍微软标注为预发布产品的 Surface Laptop Ultra。官网提醒，产品功能可能变化，也会因国家或地区而异。接下来，我们按官网信息了解它面向本地 AI 与 3D 图形工作的特点，以及屏幕、充电、接口和维修相关信息。",
+      "微软称，这款笔记本面向本地 AI 工作负载与 3D 图形。用户可在本机运行智能代理、自动化日常任务，并把云端留给更大型的 AI 工作负载。这是官网对使用方式的描述，不构成未公布的性能承诺。",
+      "屏幕为 15 英寸触控屏，可直接在显示内容上缩放、标注、滚动、签名和导航。微软明确说明，它仅针对触控交互优化，不支持触控笔输入，也不兼容 Surface Pen 等笔类配件。",
+      "触控板方面，微软称这是其最大的精密触觉触控板。机身还配有内置磁吸 USB-C 充电口，将磁吸连接的便利与标准 USB-C 连接结合。以上是官网列出的设计特点，不涉及额外规格或体验判断。",
+      "接口方面，官网列出三个 USB-C 接口，另有 USB-A、HDMI、SD 卡读卡器和耳机插孔。明确给出数量的是三个 USB-C；其他项目不补充数量或位置。具体接口信息请以官网列出的内容为准。",
+      "微软提到机身内部维修指引、已发布的维修指南、替换零件，以及可升级存储。替换组件与服务选项会因市场和时间而异。Surface Laptop Ultra 仍是微软标注的预发布产品，功能可能变化并因国家或地区而异。"
     ],
     "checks": [
-      "共 6 个镜头标题，均不超过 16 字；口播按镜头顺序对应，共 6 段。",
-      "仅使用给定官网事实；未添加价格、性能、续航、分辨率或未提供的功能。",
-      "明确三个 USB-C 接口；未为 USB-A、HDMI、SD 卡读卡器或耳机插孔补充数量。",
-      "说明功能、配置及维修指引与可升级存储的可用性可能因市场而异。"
+      "共六个镜头，标题均不超过16字；口播按镜头顺序对应。",
+      "首段与末段均说明微软标注的预发布状态，以及功能可能变化并因国家或地区而异。",
+      "触控屏段说明仅支持触控交互，不支持触控笔输入或 Surface Pen 兼容。",
+      "接口段仅明确三个 USB-C 的数量，不为其他接口添加数量或位置。",
+      "未添加未提供的价格、续航、性能或规格，也未声称亲身体验或保证维修服务；不将短片描述为微软官方广告。"
     ]
   },
   "trace": {
     "role": "video-producer",
     "model": "gpt-6-luna",
     "mode": "autopilot",
-    "session_id": "986dd833-1dcc-4b1f-9a87-8c9d3448dfe4",
-    "timestamp": "2026-10-25T12:23:55.514963+00:00",
+    "session_id": "d349e066-d2fc-40e0-966f-65fe867652e3",
+    "timestamp": "2026-10-26T00:16:41.159928+00:00",
     "events": [
       {
         "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
         "agent_id": null
       },
       {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
         "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
         "agent_id": null
       },
       {
         "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
         "agent_id": null
       },
       {
@@ -253,10 +210,6 @@
       },
       {
         "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
         "agent_id": null
       },
       {

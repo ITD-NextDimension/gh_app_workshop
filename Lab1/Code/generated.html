@@ -16,10 +16,13 @@
       <p class="eyebrow">THE FIRST MOVE</p>
       <h1>落子，<br>让想法成真。</h1>
       <p class="lead">不必先学会编程。<br>把你想要的游戏，说给 Copilot 听。</p>
-      <div class="status"><i></i><span id="status" role="status">正在连接 Python 棋局…</span></div>
+      <div class="status">
+        <i></i>
+        <span id="status" role="status">正在连接 Python 棋局…</span>
+      </div>
       <div class="controls">
-        <button id="undo" type="button">悔一步</button>
-        <button id="reset" type="button">重新开局</button>
+        <button id="undo">悔一步</button>
+        <button id="reset">重新开局</button>
       </div>
       <article>
         <b>给第一次下棋的你</b>
@@ -30,7 +33,10 @@
       <footer>LAB 01 · AUTOPILOT + GPT-6 LUNA<br>此标记为课程目标，不是模型运行证明</footer>
     </section>
     <section class="board-wrap">
-      <div class="board-title"><span>中国象棋</span><small>CHINESE CHESS</small></div>
+      <div class="board-title">
+        <span>中国象棋</span>
+        <small>CHINESE CHESS</small>
+      </div>
       <div id="board" role="group" aria-label="中国象棋棋盘"></div>
       <div class="legend">楚 河 &nbsp;&nbsp; / &nbsp;&nbsp; 汉 界</div>
     </section>

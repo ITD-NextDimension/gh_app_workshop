@@ -1,9 +1,20 @@
 {
+  "source": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+  "status": "Microsoft labels the Surface Laptop Ultra as a pre-release product; features may change and vary by country or region.",
   "facts": [
-    "15-inch touchscreen display",
-    "Three USB-C ports, USB-A, HDMI, SD card reader, headphone jack",
-    "Local AI workloads and 3D graphics",
-    "Repair guidance and upgradeable storage; availability varies by market"
+    "Microsoft describes the laptop as built for local AI workloads and 3D graphics.",
+    "Microsoft says users can run local agents and automate routine tasks locally, reserving the cloud for larger AI workloads.",
+    "The display is a 15-inch touchscreen. Microsoft lists zooming, marking up, scrolling, signing, and navigating directly on the display.",
+    "The touchscreen is optimized for touch interaction only. Pen input and compatibility with Surface Pen, Surface Slim Pen, or similar accessories are not supported.",
+    "Microsoft describes the touchpad as its largest precision haptic touchpad.",
+    "The built-in magnetic USB-C charging port combines magnetic convenience with standard USB-C connectivity.",
+    "The listed ports are three USB-C ports, USB-A, HDMI, an SD card reader, and a headphone jack. Only the USB-C port count is specified here.",
+    "Microsoft mentions internal wayfinding, published repair guides, replacement parts, and upgradeable storage. Replacement components and service options vary by market and over time."
   ],
-  "source": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra"
+  "exclusions": [
+    "Do not state or infer price, battery life, performance scores, benchmark results, or unlisted specifications.",
+    "Do not claim support for pen input or Surface Pen compatibility.",
+    "Do not invent the count or placement of USB-A, HDMI, SD card reader, or headphone jack ports.",
+    "Do not present this educational video as an official Microsoft advertisement."
+  ]
 }

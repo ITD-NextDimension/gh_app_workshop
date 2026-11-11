@@ -77,19 +77,19 @@ python Lab2/Code/story.py
 业务编排、口播稿和 edge-tts 都由 Python 命令行驱动；HyperFrames 负责渲染。先安装 Python 依赖（包含固定版本 edge-tts），再安装官方渲染器依赖：
 
 ```bash
-python -m pip install -r requirements.txt --index-url https://packagefeedproxy.microsoft.io/pypi/simple/
-npm ci --prefix Lab2/Code --ignore-scripts --no-audit --no-fund --registry=https://packagefeedproxy.microsoft.io/npm/
-python Lab2/Code/story.py
-python Lab2/Code/video.py prepare
-python Lab2/Code/video.py voice
+"$HOME/.venvs/hol_ghc_app/bin/python" -m pip install -r requirements.txt --index-url https://pypi.org/simple
+npm ci --prefix Lab2/Code --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org/
+"$HOME/.venvs/hol_ghc_app/bin/python" Lab2/Code/story.py
+"$HOME/.venvs/hol_ghc_app/bin/python" Lab2/Code/video.py prepare
+"$HOME/.venvs/hol_ghc_app/bin/python" Lab2/Code/video.py voice
 ```
 
-`story.py` 生成 Plan、六个镜头标题和与事实对应的普通话口播稿。`prepare` 下载官网产品图、带授权文件的 Noto Sans SC 字体，复制固定版本 GSAP，并把标题写入镜头。章节模板会按每个镜头生成独立、已填入正文的组合，避免复用组件时章节内容互相覆盖。`voice` 通过 edge-tts 命令行使用 `zh-CN-XiaoxiaoNeural`（普通话女声“晓晓”），生成 MP3 和 SRT。
+`story.py` 生成 Plan、六个镜头标题和与事实对应的普通话口播稿。官网目前标注此产品为预发布，功能可能变化并因地区而异；触控屏不支持触控笔输入或 Surface Pen 兼容。口播不得增加未核实的价格、续航或性能数字。`prepare` 下载官网产品主视觉和维修图片、带授权文件的 Noto Sans SC 字体，复制固定版本 GSAP，并把标题写入镜头；章节模板会生成独立组合。`voice` 通过 edge-tts 使用 `zh-CN-XiaoxiaoNeural` 普通话女声“晓晓”，生成 MP3 和 SRT。
 
 等价的 edge-tts 命令为：
 
 ```bash
-python -m edge_tts --file Lab2/Code/data/narration.txt --voice zh-CN-XiaoxiaoNeural --rate=-5% \
+python -m edge_tts --file Lab2/Code/data/narration.txt --voice zh-CN-XiaoxiaoNeural --rate=+0% \
   --write-media Lab2/Code/film/assets/narration.mp3 \
   --write-subtitles Lab2/Code/film/assets/narration.srt
 ```
@@ -140,7 +140,7 @@ Lab2/Code/film/output/surface-ultra.mp4
 回到课程根目录：
 
 ```bash
-python Lab2/Code/video.py probe
+"$HOME/.venvs/hol_ghc_app/bin/python" Lab2/Code/video.py probe
 ```
 
 该命令调用 `ffprobe`，把结果保存到 `film/output/ffprobe.json`。通过条件是：

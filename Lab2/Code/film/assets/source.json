@@ -1,6 +1,20 @@
 {
-  "url": "https://images.ctfassets.net/jy9s7k22hbg4/2FXwQdsQVLy6ZRGfq09eLX/39d4e78d90dcc0e476865ec371da68fb/SLU_Hero_Desktop_Poster__1_.jpg",
   "page": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
-  "sha256": "274208bf62efee7a895b09580b035cd2823726a0b3fd61a156b1cacb96614f3a",
-  "rights": "Microsoft product image; educational reference only. Not an open-source asset license."
+  "page_provenance": {
+    "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+    "retrieved_at": "2026-10-26T00:14:00.356444+00:00",
+    "sha256": "6aaf9df3654d4e37fafbcf7ad1668490d0da1da3e9d389c89bbbf457b3bb27f6",
+    "title": "Surface Laptop Ultra: The new high-performance Surface Laptop | Microsoft Surface"
+  },
+  "assets": {
+    "surface-hero.jpg": {
+      "url": "https://images.ctfassets.net/jy9s7k22hbg4/2FXwQdsQVLy6ZRGfq09eLX/39d4e78d90dcc0e476865ec371da68fb/SLU_Hero_Desktop_Poster__1_.jpg",
+      "sha256": "274208bf62efee7a895b09580b035cd2823726a0b3fd61a156b1cacb96614f3a"
+    },
+    "serviceability.jpg": {
+      "url": "https://images.ctfassets.net/jy9s7k22hbg4/3DixSEZZgkEs60Sfd7upM/34f71bba22e8999bab7470a3b3bbb3e1/SLU_600_Serviceability_Poster__2_.jpg",
+      "sha256": "f9c7ca5018ebe513d44d76a1bcf59df6921404ecbea744e78ff06daecf8adf2a"
+    }
+  },
+  "rights": "Microsoft product imagery. Educational reference only; not an open-source asset license."
 }

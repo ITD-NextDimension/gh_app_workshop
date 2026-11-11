@@ -5,8 +5,8 @@
   "reference_now": "2026-10-19T09:00:00+08:00",
   "week_start": "2026-10-19T00:00:00+08:00",
   "week_end_exclusive": "2026-10-26T00:00:00+08:00",
-  "summary": "本周安排：优先准备 FY2025 财报观察（10月21日前），随后完成竖屏短片审核（10月22日前），再体验中国象棋小游戏并记录反馈。周一、周三、周四各有一场会议；不安排具体空闲时段。",
-  "calendar_summary": "本周共 3 场会议：周一、周三和周四各 1 场。",
+  "summary": "本周先准备 FY2025 财报观察（10月21日前），再审核竖屏短片（10月22日前）；中国象棋小游戏反馈安排在本周灵活完成。周一、周三、周四各有一场会议。",
+  "calendar_summary": "本周共有3场会议：周一、周三、周四各1场。",
   "tasks": [
     {
       "title": "准备三条 FY2025 财报观察",
@@ -22,13 +22,13 @@
       "scheduling_note": "建议时段，未写入 Outlook"
     },
     {
-      "title": "完成 12 秒竖屏短片的审核",
+      "title": "审核 12 秒竖屏短片",
       "source_id": "mail-101",
       "evidence": "请在 2026-10-22 17:00 前完成 12 秒竖屏短片的审核，预计需要 60 分钟。",
       "deadline": "2026-10-22T17:00:00+08:00",
       "estimate_minutes": 60,
       "priority": 2,
-      "id": "ff7e8498f993",
+      "id": "73e4dd2840ba",
       "done": false,
       "scheduled_start": "2026-10-19T11:15:00+08:00",
       "scheduled_end": "2026-10-19T12:15:00+08:00",
@@ -73,39 +73,19 @@
       "role": "mail-triage",
       "model": "gpt-6-luna",
       "mode": "autopilot",
-      "session_id": "0c552e49-05a2-4b32-b3ac-12682a1f5be4",
-      "timestamp": "2026-10-25T12:38:34.300095+00:00",
+      "session_id": "623b9d65-9c19-426c-9829-b5f23b5a5381",
+      "timestamp": "2026-10-26T00:14:07.561881+00:00",
       "events": [
         {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
           "agent_id": null
         },
         {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
           "agent_id": null
         },
         {
           "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
           "agent_id": null
         },
         {
@@ -114,10 +94,6 @@
         },
         {
           "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
           "agent_id": null
         },
         {
@@ -239,34 +215,14 @@
       "role": "calendar-reader",
       "model": "gpt-6-luna",
       "mode": "autopilot",
-      "session_id": "f0410eb4-cf42-46c4-a26f-90b952976a75",
-      "timestamp": "2026-10-25T12:38:36.186107+00:00",
+      "session_id": "2b9a249e-47b0-4f27-9092-3baa6ba26c4f",
+      "timestamp": "2026-10-26T00:14:05.996807+00:00",
       "events": [
         {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
           "agent_id": null
         },
         {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
           "agent_id": null
         },
@@ -275,15 +231,11 @@
           "agent_id": null
         },
         {
-          "type": "SessionEventType.UNKNOWN",
+          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
           "agent_id": null
         },
         {
           "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
           "agent_id": null
         },
         {
@@ -312,82 +264,6 @@
         },
         {
           "type": "SessionEventType.SYSTEM_MESSAGE",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.ASSISTANT_TURN_START",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_USAGE_INFO",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.MODEL_CALL_START",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.ASSISTANT_USAGE",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.MODEL_CALL_FINISHED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.ASSISTANT_MESSAGE",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.TOOL_EXECUTION_START",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.TOOL_EXECUTION_COMPLETE",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_TASK_COMPLETE",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.ASSISTANT_TURN_END",
           "agent_id": null
         },
         {
@@ -481,35 +357,15 @@
       "role": "weekly-planner",
       "model": "gpt-6-luna",
       "mode": "autopilot",
-      "session_id": "b0e00496-de52-4580-8c93-b0d45dc40db5",
-      "timestamp": "2026-10-25T12:38:48.303940+00:00",
+      "session_id": "9747fb48-247b-4558-9620-4e9bec53b5f7",
+      "timestamp": "2026-10-26T00:14:21.186644+00:00",
       "events": [
         {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
           "agent_id": null
         },
         {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-          "agent_id": null
-        },
-        {
           "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.UNKNOWN",
           "agent_id": null
         },
         {
@@ -522,10 +378,6 @@
         },
         {
           "type": "SessionEventType.SESSION_MCP_SERVERS_LOADED",
-          "agent_id": null
-        },
-        {
-          "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
           "agent_id": null
         },
         {
