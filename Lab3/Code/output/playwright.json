@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "tool": "Playwright Python",
+  "browser": "Chromium 156.0.8078.4",
+  "url": "http://127.0.0.1:8013/",
+  "timestamp": "2026-11-25T02:46:10.710819+00:00",
+  "checks": [
+    "FY2025 totals/margin render; UUID is retained only in local analysis.json",
+    "segment click filters values without inventing segment net income",
+    "FY2024 selection returns 87,464 cloud revenue without fabricated YoY",
+    "segment view follows the fiscal-year selector and lists all three segments",
+    "source URL, SHA-256, reconciliation and redacted public HTML evidence are present",
+    "browser ends on FY2025 all-business view; no JavaScript errors"
+  ],
+  "page_errors": []
+}

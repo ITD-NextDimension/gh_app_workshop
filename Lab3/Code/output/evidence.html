@@ -1,40 +1,372 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>一个 Agent，三条财报观察</title><style>
-body{margin:0;background:#f4f6fa;font:16px/1.8 system-ui,sans-serif;color:#243345}
-main{max-width:1100px;margin:50px auto;padding:35px}
-header{font-size:12px;letter-spacing:2px;color:#647a91}h1{font-size:38px;line-height:1.4}
-.badge{background:#e5edf5;color:#45627f;padding:10px 18px;border-radius:8px}
-section{background:white;padding:25px;border:1px solid #dde5ed;border-radius:12px;margin:24px 0}
-pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 ui-monospace,monospace}
-small{color:#7a8997}h2{font-size:18px}
-</style><main><header>COPILOT HOL / LAB3 / REAL EXECUTION RECORD</header><h1>一个 Agent，三条财报观察</h1><div class="badge">真实运行记录的浏览器视图 · 不是 Copilot App 原生界面截图</div><section><h2>单 Agent 实际记录</h2><pre>{
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单 Agent 财报分析 · 实际运行记录</title>
+<style>
+body{margin:0;background:#f4f6f9;color:#202b39;font:15px/1.8 system-ui,sans-serif}
+main{max-width:980px;margin:36px auto;padding:24px}
+header,section{padding:22px;background:white;border:1px solid #e1e6ec;border-radius:10px;margin-bottom:16px}
+h1{font-size:28px}h2{font-size:16px}small,header p{color:#748092}
+pre{overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.7 ui-monospace,monospace}
+</style><main><header><small>LAB 03 · COPILOT PYTHON SDK</small>
+<h1>微软 FY2025 财报观察 · 实际运行证据</h1>
+<p>本页由本次 SDK 会话输出生成，不是旧会话记录或模拟结果。</p></header>
+<section><h2>会话证明</h2><pre>{
   &quot;role&quot;: &quot;single-financial-analyst&quot;,
   &quot;model&quot;: &quot;gpt-6-luna&quot;,
+  &quot;reasoning_effort&quot;: &quot;medium&quot;,
   &quot;mode&quot;: &quot;autopilot&quot;,
-  &quot;session_id&quot;: &quot;cdf257cf-3d4f-4d6a-9fef-235a771f0b64&quot;,
-  &quot;timestamp&quot;: &quot;2026-10-25T11:12:45.592881+00:00&quot;
-}</pre></section><section><h2>Python 核对的官方数据（百万美元）</h2><pre>{
-  &quot;FY2025 Revenue&quot;: 281724,
-  &quot;FY2024 Revenue&quot;: 245122,
-  &quot;FY2025 Operating income&quot;: 128528,
-  &quot;FY2025 Net income&quot;: 101832,
-  &quot;Operating margin&quot;: &quot;128528 / 281724 × 100 = 45.62%&quot;,
-  &quot;Fiscal year ended&quot;: &quot;2025-06-30&quot;
-}</pre></section><section><h2>模型实际解释</h2><pre>[
-  {
-    &quot;heading&quot;: &quot;营收增长约 14.9%&quot;,
-    &quot;explanation&quot;: &quot;Revenue 从 FY2024 的 245122 增至 FY2025 的 281724（百万美元），增幅为 (281724−245122)÷245122≈14.9%。这是营收变化，不代表利润或利润率变化。&quot;,
-    &quot;metric&quot;: &quot;Revenue&quot;
+  &quot;session_id&quot;: &quot;本机 analysis.json 已记录&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-25T02:39:45.968516+00:00&quot;,
+  &quot;events&quot;: [
+    {
+      &quot;type&quot;: &quot;SessionEventType.PENDING_MESSAGES_MODIFIED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.PENDING_MESSAGES_MODIFIED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_TITLE_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVERS_LOADED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_INFO&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_TOOLS_UPDATED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.USER_MESSAGE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SYSTEM_MESSAGE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_TURN_START&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_USAGE_INFO&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.MODEL_CALL_START&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_USAGE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.MODEL_CALL_FINISHED&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_MESSAGE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_REASONING&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_TURN_END&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.UNKNOWN&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_USAGE_CHECKPOINT&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.ASSISTANT_IDLE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_IDLE&quot;,
+      &quot;agent_id&quot;: null
+    },
+    {
+      &quot;type&quot;: &quot;SessionEventType.SESSION_SHUTDOWN&quot;,
+      &quot;agent_id&quot;: null
+    }
+  ],
+  &quot;permissions&quot;: &quot;No shell, browser, file or subagent tools. task_complete only.&quot;
+}</pre></section>
+<section><h2>Python 数值与分部对账</h2><pre>{
+  &quot;FY2025&quot;: {
+    &quot;year&quot;: &quot;2025&quot;,
+    &quot;segment&quot;: &quot;all&quot;,
+    &quot;revenue&quot;: 281724.0,
+    &quot;operating_income&quot;: 128528.0,
+    &quot;net_income&quot;: 101832.0,
+    &quot;margin_pct&quot;: 45.62195624085985,
+    &quot;bar_pct&quot;: 100,
+    &quot;yoy_pct&quot;: 14.932156232406712
   },
-  {
-    &quot;heading&quot;: &quot;营业利润增速快于营收&quot;,
-    &quot;explanation&quot;: &quot;Operating income 从 109433 增至 128528（百万美元），增幅为 (128528−109433)÷109433≈17.5%；同期 Revenue 增幅约 14.9%。这是利润金额的比较，不是利润率。&quot;,
-    &quot;metric&quot;: &quot;Operating income&quot;
+  &quot;FY2024&quot;: {
+    &quot;year&quot;: &quot;2024&quot;,
+    &quot;segment&quot;: &quot;all&quot;,
+    &quot;revenue&quot;: 245122.0,
+    &quot;operating_income&quot;: 109433.0,
+    &quot;net_income&quot;: 88136.0,
+    &quot;margin_pct&quot;: 44.64429957327371,
+    &quot;bar_pct&quot;: 100,
+    &quot;yoy_pct&quot;: null
   },
-  {
-    &quot;heading&quot;: &quot;营业利润率小幅上升&quot;,
-    &quot;explanation&quot;: &quot;按 Operating income÷Revenue 计算，FY2025 为 128528÷281724≈45.62%，FY2024 为 109433÷245122≈44.64%，上升约 0.98 个百分点。利润率是利润相对于营收的比例，不等同于利润金额。&quot;,
-    &quot;metric&quot;: &quot;Operating income&quot;
+  &quot;reported_metrics&quot;: {
+    &quot;Revenue&quot;: {
+      &quot;2025&quot;: 281724.0,
+      &quot;2024&quot;: 245122.0
+    },
+    &quot;Operating income&quot;: {
+      &quot;2025&quot;: 128528.0,
+      &quot;2024&quot;: 109433.0
+    },
+    &quot;Net income&quot;: {
+      &quot;2025&quot;: 101832.0,
+      &quot;2024&quot;: 88136.0
+    }
+  },
+  &quot;segment_reconciliation&quot;: {
+    &quot;2025&quot;: {
+      &quot;segment_revenue_sum&quot;: 281724.0,
+      &quot;reported_revenue&quot;: 281724.0,
+      &quot;segment_operating_income_sum&quot;: 128528.0,
+      &quot;reported_operating_income&quot;: 128528.0
+    },
+    &quot;2024&quot;: {
+      &quot;segment_revenue_sum&quot;: 245122.0,
+      &quot;reported_revenue&quot;: 245122.0,
+      &quot;segment_operating_income_sum&quot;: 109433.0,
+      &quot;reported_operating_income&quot;: 109433.0
+    }
   }
-]</pre></section><section><h2>边界</h2><pre>Power BI 风格教学界面，不是 Power BI 产品。
-一个模型会话，没有工具可创建子 Agent。
-没有投资建议；所有筛选均为本地数据视图。</pre></section><small>本页是运行记录，不是 App 原生画面。真实 App 设置与计划批准另有截图；原生自定义 Canvas 仍待验收。私人原件不在本页展示。</small></main></html>
+}</pre></section>
+<section><h2>模型解释</h2><pre>[
+  {
+    &quot;heading&quot;: &quot;营收同比增长&quot;,
+    &quot;explanation&quot;: &quot;FY2025 营收为 281,724 百万美元，FY2024 为 245,122 百万美元；给定计算结果显示同比增长 14.93%。FY2025 指截至 2025-06-30 的财年，并非自然年。&quot;,
+    &quot;metric&quot;: &quot;营收&quot;
+  },
+  {
+    &quot;heading&quot;: &quot;营业利润率提高&quot;,
+    &quot;explanation&quot;: &quot;FY2025 营业利润为 128,528 百万美元，FY2024 为 109,433 百万美元。给定计算结果显示，营业利润率从 44.64% 升至 45.62%；这里的营业利润率是营业利润占营收的比例，不是净利润率。&quot;,
+    &quot;metric&quot;: &quot;营业利润及营业利润率&quot;
+  },
+  {
+    &quot;heading&quot;: &quot;净利润高于上年&quot;,
+    &quot;explanation&quot;: &quot;FY2025 净利润为 101,832 百万美元，FY2024 为 88,136 百万美元。净利润是与营业利润不同的指标；本观察只对比给定的两个财年金额，不将其与营收或营业利润率混为一谈。&quot;,
+    &quot;metric&quot;: &quot;净利润&quot;
+  }
+]</pre></section>
+<section><h2>边界</h2><p>单一分析 Agent；模型无浏览、文件、Shell 或子 Agent 工具。只解释指定 Microsoft 年报中的数据，不提供投资建议。</p></section>
+</main></html>

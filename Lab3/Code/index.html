@@ -1,10 +1,126 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>经营观察室 · 微软 FY2025</title><link rel="stylesheet" href="style.css"><body>
-<header><b>▥ &nbsp;经营观察室</b><span>LAB 03 / 单 Agent · Copilot Python SDK</span><span>非 Microsoft Power BI 产品</span></header>
-<nav><div class="nav-logo">M</div><b>▥</b><p>报告</p><b>◈</b><p>数据</p><b>✦</b><p>洞察</p></nav>
-<main><div class="heading"><div><p class="eyebrow">MICROSOFT · ANNUAL REPORT</p><h1>把数字，变成看得懂的故事。</h1><p>FY2025 经营分析 · 财年截至 6 月 30 日 · 金额：百万美元</p></div><label>财年<select id="year"><option value="2025">FY2025</option><option value="2024">FY2024</option></select></label></div>
-<div class="tabs"><button data-view="overview" class="active">经营概览</button><button data-view="segments">业务分部</button><button data-view="source">数据与来源</button></div>
-<section id="overview"><div id="cards"></div><div class="panels"><article><h2>业务如何创造营收</h2><p class="muted">点击条形图，可筛选业务分部</p><div id="bars"></div><button id="clear">清除分部筛选</button></article><article class="insights"><p class="eyebrow">✦ SINGLE AGENT INSIGHTS</p><h2 id="analysis-title">正在加载单 Agent 分析…</h2><div id="findings"></div><small id="trace"></small></article></div></section>
-<section id="segments" hidden><article><h2>业务分部 · 可比较口径</h2><p>FY2024 使用 FY2025 年报重述的可比数据，不拼接旧年报的分部口径。</p><table><thead><tr><th>业务</th><th>FY2024 营收</th><th>FY2025 营收</th><th>同比</th></tr></thead><tbody id="segment-table"></tbody></table></article></section>
-<section id="source" hidden><article><h2>每一个数字，都能回到原文。</h2><p><a href="https://www.microsoft.com/investor/reports/ar25/index.html" target="_blank" rel="noopener">Microsoft Annual Report 2025 ↗</a></p><p>核心表格：Financial Highlights、Segment Results、Income Statements、Note 19。</p><pre id="provenance"></pre><p>本页面是 Power BI 风格教学界面，不是 Power BI 嵌入，也不需要 Power BI 许可证。</p></article></section>
-<p id="error" role="alert"></p><footer>事实由官方数据支持 · 计算由 Python 完成 · 解释由一个 GPT-6 Luna 会话完成 · 不构成投资建议</footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>经营观察室 · 微软 FY2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="经营观察室首页">
+      <span class="brand-mark">M</span>
+      <span>经营观察室</span>
+    </a>
+    <div class="topbar-meta">
+      <span>MICROSOFT · ANNUAL REPORT</span>
+      <span class="privacy">单一分析 Agent</span>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="工作区">
+      <div class="side-icon active" title="财报观察室">▦</div>
+      <div class="side-caption">财报</div>
+      <div class="side-icon" aria-hidden="true">◫</div>
+      <div class="side-caption">洞察</div>
+      <div class="sidebar-footer">FY<br>25</div>
+    </aside>
+
+    <main>
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">年度经营 · 数据观察</p>
+          <h1>把数字，变成看得懂的故事。</h1>
+          <p class="intro">微软财报观察室 · FY2025 截至 2025 年 6 月 30 日 · 金额：百万美元</p>
+        </div>
+        <label class="year-filter" for="year">
+          <span>查看财年</span>
+          <select id="year">
+            <option value="2025">FY2025</option>
+            <option value="2024">FY2024</option>
+          </select>
+        </label>
+      </section>
+
+      <nav class="tabs" aria-label="财报视图" role="tablist">
+        <button type="button" class="active" data-view="overview" role="tab" aria-selected="true">经营概览</button>
+        <button type="button" data-view="segments" role="tab" aria-selected="false">业务分部</button>
+        <button type="button" data-view="source" role="tab" aria-selected="false">数据与来源</button>
+      </nav>
+
+      <p id="loading" class="status">正在读取年报数据与单 Agent 分析…</p>
+      <p id="error" class="error" role="alert"></p>
+
+      <section id="overview" data-panel role="tabpanel">
+        <div id="cards" class="metric-grid"></div>
+        <div class="overview-grid">
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">REVENUE BY SEGMENT</p>
+                <h2>营收来自哪些业务？</h2>
+              </div>
+              <span id="selected-segment" class="selection-chip">全部业务</span>
+            </div>
+            <p class="muted">选择一条业务，概览数字会同步筛选。条形图显示分部营收。</p>
+            <div id="bars" class="bar-list"></div>
+            <button id="clear" class="quiet-button" type="button">清除分部筛选</button>
+          </article>
+
+          <article class="panel insight-panel">
+            <p class="eyebrow">✦ SINGLE-AGENT INSIGHTS</p>
+            <h2 id="analysis-title">正在准备分析…</h2>
+            <div id="findings" class="findings"></div>
+            <p id="trace" class="trace"></p>
+          </article>
+        </div>
+        <p class="disclaimer">财务事实取自微软年报 · 比率与对账由 Python 计算 · 仅作信息观察，不构成投资建议</p>
+      </section>
+
+      <section id="segments" data-panel role="tabpanel" hidden>
+        <article class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">SEGMENT VIEW</p>
+              <h2>业务分部 · 同一张年报口径</h2>
+            </div>
+            <span id="segment-year" class="muted"></span>
+          </div>
+          <p id="comparability" class="muted"></p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">业务分部</th>
+                  <th scope="col">营收</th>
+                  <th scope="col">营业利润</th>
+                  <th scope="col">营业利润率</th>
+                </tr>
+              </thead>
+              <tbody id="segment-table"></tbody>
+            </table>
+          </div>
+          <p class="muted">点击业务名称可筛选该分部；净利润没有按分部披露。</p>
+        </article>
+      </section>
+
+      <section id="source" data-panel role="tabpanel" hidden>
+        <article class="panel source-panel">
+          <p class="eyebrow">SOURCE & METHOD</p>
+          <h2>每一个数字，都能回到原文。</h2>
+          <p><a href="https://www.microsoft.com/investor/reports/ar25/index.html" target="_blank" rel="noopener noreferrer">Microsoft Annual Report 2025 ↗</a></p>
+          <p class="muted">财务摘要、分部业绩及综合收益表 · 单位为百万美元</p>
+          <h3>分部之和核对</h3>
+          <pre id="reconciliation"></pre>
+          <h3>来源快照</h3>
+          <pre id="provenance"></pre>
+          <p class="product-note">这是 Power BI 风格的教学界面，不是 Microsoft Power BI 产品或嵌入报表。模型只解释下方提供的数据，不联网补数，也不提供投资建议。</p>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

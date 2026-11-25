@@ -4,16 +4,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from tools.web import serve
-from finance import dataset
+from finance import dataset, views
 
 ROOT = Path(__file__).parent
 
 
 def get_api(path):
     if path == "/api/data":
-        return dataset()
+        data = dataset()
+        data["views"] = views(data)
+        return data
     if path == "/api/analysis":
-        return json.loads((ROOT / "output/analysis.json").read_text())
+        analysis = json.loads((ROOT / "output/analysis.json").read_text())
+        if analysis.get("trace", {}).get("session_id"):
+            analysis["trace"]["session_id"] = "本机 analysis.json 已记录"
+        return analysis
     raise ValueError("Unknown API")
 
 

@@ -1,29 +1,30 @@
 {
-  "title": "微软 FY2025 财报：3 条观察",
+  "title": "微软 FY2025 财报观察",
   "findings": [
     {
-      "heading": "营收同比增长约 14.9%",
-      "explanation": "Revenue 从 FY2024 的 245,122 增至 FY2025 的 281,724（百万美元）；同比增幅 = (281,724 − 245,122) ÷ 245,122 ≈ 14.9%。",
-      "metric": "Revenue"
+      "heading": "营收同比增长",
+      "explanation": "FY2025 营收为 281,724 百万美元，FY2024 为 245,122 百万美元；给定计算结果显示同比增长 14.93%。FY2025 指截至 2025-06-30 的财年，并非自然年。",
+      "metric": "营收"
     },
     {
-      "heading": "营业利润增速快于营收",
-      "explanation": "Operating income 从 109,433 增至 128,528（百万美元），增幅 = (128,528 − 109,433) ÷ 109,433 ≈ 17.4%；相比之下，Revenue 增幅约 14.9%。",
-      "metric": "Operating income"
+      "heading": "营业利润率提高",
+      "explanation": "FY2025 营业利润为 128,528 百万美元，FY2024 为 109,433 百万美元。给定计算结果显示，营业利润率从 44.64% 升至 45.62%；这里的营业利润率是营业利润占营收的比例，不是净利润率。",
+      "metric": "营业利润及营业利润率"
     },
     {
-      "heading": "营业利润率约提高 1.0 个百分点",
-      "explanation": "营业利润率按 Operating income ÷ Revenue 计算：FY2025 为 128,528 ÷ 281,724 ≈ 45.6%，FY2024 为 109,433 ÷ 245,122 ≈ 44.6%；两者相差约 1.0 个百分点。这是利润相对于营收的比例，不是利润金额。",
-      "metric": "Operating income"
+      "heading": "净利润高于上年",
+      "explanation": "FY2025 净利润为 101,832 百万美元，FY2024 为 88,136 百万美元。净利润是与营业利润不同的指标；本观察只对比给定的两个财年金额，不将其与营收或营业利润率混为一谈。",
+      "metric": "净利润"
     }
   ],
-  "caveat": "FY2025 指截至 2025 年 6 月 30 日的财年，并非自然年；金额单位为百万美元。",
+  "caveat": "金额单位为百万美元；FY2025 为截至 2025-06-30 的财年。",
   "trace": {
     "role": "single-financial-analyst",
     "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
     "mode": "autopilot",
-    "session_id": "6210ed59-2bc4-4cbe-8149-da25cfd6706b",
-    "timestamp": "2026-10-25T12:37:25.889790+00:00",
+    "session_id": "本机 analysis.json 已记录",
+    "timestamp": "2026-11-25T02:39:45.968516+00:00",
     "events": [
       {
         "type": "SessionEventType.PENDING_MESSAGES_MODIFIED",
@@ -34,7 +35,55 @@
         "agent_id": null
       },
       {
-        "type": "SessionEventType.UNKNOWN",
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
         "agent_id": null
       },
       {
@@ -50,7 +99,39 @@
         "agent_id": null
       },
       {
-        "type": "SessionEventType.UNKNOWN",
+        "type": "SessionEventType.SESSION_TITLE_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
         "agent_id": null
       },
       {
@@ -66,27 +147,71 @@
         "agent_id": null
       },
       {
-        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
-        "agent_id": null
-      },
-      {
         "type": "SessionEventType.SESSION_INFO",
         "agent_id": null
       },
       {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
+        "agent_id": null
+      },
+      {
         "type": "SessionEventType.SESSION_TOOLS_UPDATED",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.UNKNOWN",
-        "agent_id": null
-      },
-      {
-        "type": "SessionEventType.SESSION_MODE_NOTICE_DELIVERED",
         "agent_id": null
       },
       {
@@ -115,6 +240,10 @@
       },
       {
         "type": "SessionEventType.UNKNOWN",
+        "agent_id": null
+      },
+      {
+        "type": "SessionEventType.SESSION_MCP_SERVER_STATUS_CHANGED",
         "agent_id": null
       },
       {
@@ -150,10 +279,6 @@
         "agent_id": null
       },
       {
-        "type": "SessionEventType.MODEL_CALL_FINAL_RESULT",
-        "agent_id": null
-      },
-      {
         "type": "SessionEventType.UNKNOWN",
         "agent_id": null
       },
@@ -184,5 +309,55 @@
     ],
     "permissions": "No shell, browser, file or subagent tools. task_complete only."
   },
-  "source": "https://www.microsoft.com/investor/reports/ar25/index.html"
+  "source": "https://www.microsoft.com/investor/reports/ar25/index.html",
+  "calculated": {
+    "FY2025": {
+      "year": "2025",
+      "segment": "all",
+      "revenue": 281724.0,
+      "operating_income": 128528.0,
+      "net_income": 101832.0,
+      "margin_pct": 45.62195624085985,
+      "bar_pct": 100,
+      "yoy_pct": 14.932156232406712
+    },
+    "FY2024": {
+      "year": "2024",
+      "segment": "all",
+      "revenue": 245122.0,
+      "operating_income": 109433.0,
+      "net_income": 88136.0,
+      "margin_pct": 44.64429957327371,
+      "bar_pct": 100,
+      "yoy_pct": null
+    },
+    "reported_metrics": {
+      "Revenue": {
+        "2025": 281724.0,
+        "2024": 245122.0
+      },
+      "Operating income": {
+        "2025": 128528.0,
+        "2024": 109433.0
+      },
+      "Net income": {
+        "2025": 101832.0,
+        "2024": 88136.0
+      }
+    },
+    "segment_reconciliation": {
+      "2025": {
+        "segment_revenue_sum": 281724.0,
+        "reported_revenue": 281724.0,
+        "segment_operating_income_sum": 128528.0,
+        "reported_operating_income": 128528.0
+      },
+      "2024": {
+        "segment_revenue_sum": 245122.0,
+        "reported_revenue": 245122.0,
+        "segment_operating_income_sum": 109433.0,
+        "reported_operating_income": 109433.0
+      }
+    }
+  }
 }
