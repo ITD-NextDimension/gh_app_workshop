@@ -1,9 +1,27 @@
 {
+  "product": "Surface Laptop Ultra",
   "facts": [
-    "15-inch touchscreen display",
-    "Three USB-C ports, USB-A, HDMI, SD card reader, headphone jack",
-    "Local AI workloads and 3D graphics",
-    "Repair guidance and upgradeable storage; availability varies by market"
+    "Microsoft's product page positions the laptop for local AI workloads and 3D graphics.",
+    "The display is a 15-inch touchscreen optimized for touch interaction; pen input and Surface Pen compatibility are not supported.",
+    "Microsoft Learn lists three USB-C ports, USB-A, HDMI, an SD card reader, and a 3.5 mm headphone jack.",
+    "Microsoft describes published repair guides and upgradeable storage; replacement components and service options vary by market and over time."
   ],
-  "source": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra"
+  "sources": [
+    {
+      "name": "Microsoft Surface product page",
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+      "supports": ["product name", "local AI and 3D graphics", "touch display", "repair guides", "upgradeable storage"]
+    },
+    {
+      "name": "Microsoft Learn technical specifications",
+      "url": "https://learn.microsoft.com/en-us/surface/tech-specs/surface-laptop-ultra-1stedition",
+      "supports": ["15-inch touchscreen", "touch-only interaction", "pen input caveat", "ports", "serviceability caveat"]
+    }
+  ],
+  "excluded": [
+    "Price",
+    "Battery-life duration",
+    "Performance measurements or comparisons",
+    "Unverified display specifications"
+  ]
 }

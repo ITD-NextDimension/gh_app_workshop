@@ -1,0 +1,113 @@
+{
+  "record_date": "2026-11-25",
+  "scope": "Lab4 Python and Canvas validation",
+  "demo": {
+    "data_mode": "demo",
+    "reference_clock": "2026-10-19T09:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "week_start": "2026-10-19T00:00:00+08:00",
+    "week_end_exclusive": "2026-10-26T00:00:00+08:00",
+    "outlook_accessed": false
+  },
+  "sdk_sessions": {
+    "distinct_session_ids_verified": true,
+    "session_id_redaction": "[REDACTED]",
+    "sessions": [
+      {
+        "role": "mail-triage",
+        "model": "gpt-6-luna",
+        "mode": "autopilot",
+        "session_id": "[REDACTED]"
+      },
+      {
+        "role": "calendar-reader",
+        "model": "gpt-6-luna",
+        "mode": "autopilot",
+        "session_id": "[REDACTED]"
+      },
+      {
+        "role": "weekly-planner",
+        "model": "gpt-6-luna",
+        "mode": "autopilot",
+        "session_id": "[REDACTED]"
+      }
+    ]
+  },
+  "python_tests": {
+    "environment": "temporary isolated Python environment; no repository dependencies changed",
+    "framework": "unittest",
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      "test_authorized_api_post_persists_and_restores_zero_of_three",
+      "test_deadline_equal_to_reference_time_cannot_fit",
+      "test_each_task_has_exact_source_evidence_and_only_explicit_deadline",
+      "test_expired_deadline_is_left_unscheduled",
+      "test_fixed_clock_week_is_local_monday_through_next_monday",
+      "test_invalid_calendar_interval_is_rejected",
+      "test_invalid_task_duration_is_rejected",
+      "test_naive_datetimes_are_rejected",
+      "test_private_route_is_404_and_unauthenticated_post_is_403",
+      "test_running_app_api_is_zero_of_three",
+      "test_scheduled_tasks_do_not_overlap_each_other",
+      "test_scheduled_tasks_do_not_overlap_meetings",
+      "test_scheduled_tasks_stay_in_current_week_and_work_hours",
+      "test_store_completion_persists_when_reopened_and_can_be_reset",
+      "test_store_rejects_non_boolean_completion",
+      "test_store_rejects_unknown_task",
+      "test_utc_reference_converts_to_shanghai_week"
+    ],
+    "schedule_checks": {
+      "timezone_aware_inputs_required": "passed",
+      "local_week_and_utc_conversion": "passed",
+      "scheduled_within_week_and_work_hours": "passed",
+      "calendar_conflicts": "passed",
+      "task_task_conflicts": "passed",
+      "expired_deadlines_unscheduled": "passed",
+      "deadline_at_reference_time_unscheduled": "passed",
+      "source_evidence_and_undated_deadline": "passed"
+    },
+    "persistence_checks": {
+      "store_reopen": "passed",
+      "authorized_api_post_then_get": "passed",
+      "api_state_after_restore": "0/3"
+    }
+  },
+  "app_api": {
+    "entrypoint": "Lab4/Code/app.py",
+    "address": "127.0.0.1:8014",
+    "plan_get": 200,
+    "private_data_route": 404,
+    "complete_post_without_X_Workshop": 403,
+    "authorized_completion_persisted_after_reload": true,
+    "final_plan_done_count": "0/3"
+  },
+  "browser_persistence": {
+    "surface": "App integrated Browser",
+    "checked_all_tasks_then_reloaded": "3/3 persisted",
+    "restored_all_tasks_then_reloaded": "0/3"
+  },
+  "native_canvas": {
+    "extension": "hol-weekboard",
+    "scope": "current session only",
+    "capabilities_and_open": "passed",
+    "document_id": "weekly-demo",
+    "instance_id": "weekly-main",
+    "complete_done_true": "passed; plan.json showed 1/3",
+    "reopen_preserved_done_true": "passed",
+    "complete_done_false": "passed; plan.json restored to 0/3",
+    "ui_cache_observed": true,
+    "final_ui_state": "User confirmed 0/3 after manually unchecking the first item in the native Canvas.",
+    "manual_reset_reminder": "Before ending the demo, manually uncheck the first item in the native Canvas and confirm 0/3; a file/API reset alone may leave the already-open Canvas rendering stale."
+  },
+  "privacy_and_scope": {
+    "session_uuids_redacted": true,
+    "personal_paths_redacted": true,
+    "original_trace_fields_edited": false,
+    "other_session_browsers_operated": false,
+    "global_extension_installed": false,
+    "committed_or_pushed": false
+  }
+}

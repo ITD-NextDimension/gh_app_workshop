@@ -145,6 +145,12 @@ python Lab4/Code/canvas_smoke.py
 
 後續又建立了真實 App 驗收會話，確認其中缺少 `extensions_manage` / `extensions_reload`，能力查詢也沒有 `hol-weekboard`。因此該原生會話未安裝、未開啟自定義 Canvas；macOS 權限已經開啟，不應再把原因寫成系統權限未授權。見 `verification/native-ui.json`。
 
+### 2026-11-25 · 當前會話級 Canvas 驗收
+
+本次在當前會話目錄安裝並載入了 `hol-weekboard`，原生 Canvas 成功開啟 `weekly-demo`；`complete` 寫入的狀態在重新開啟文件後仍保留。定向 Python 測試 **17/17 通過**。公開記錄見 `Code/output/rerun-2026-11-25.json`，其中會話 UUID 與個人路徑均已遮蔽。
+
+**結束演示前的提醒：** 如果透過 API 或 `complete` 動作把檔案狀態恢復為 `0/3`，已開啟的原生 Canvas 可能仍顯示快取的 `1/3`。請在原生 Canvas 中手動取消第一項勾選，並確認介面顯示 `0/3`；不要只檢查檔案或 API。
+
 講師可以在從 guide 獲取 SDK 路徑後重複該驗證：
 
 ```bash

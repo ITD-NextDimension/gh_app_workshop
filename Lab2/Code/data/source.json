@@ -1,6 +1,83 @@
 {
-  "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
-  "retrieved_at": "2026-10-25T11:09:22.206343+00:00",
-  "sha256": "6aaf9df3654d4e37fafbcf7ad1668490d0da1da3e9d389c89bbbf457b3bb27f6",
-  "title": "Surface Laptop Ultra: The new high-performance Surface Laptop | Microsoft Surface"
+  "product": "Surface Laptop Ultra",
+  "run_id": "2026-11-25",
+  "retrieved_at": "2026-11-25T02:54:54+00:00",
+  "sources": [
+    {
+      "name": "Microsoft Surface product page",
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+      "final_url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+      "retrieved_at": "2026-11-25T02:54:54+00:00",
+      "sha256": "6a19511b83d453fb4aaa2a267da7217229637e3860ddbd50a65b356e3b3fa7df"
+    },
+    {
+      "name": "Microsoft Learn technical specifications",
+      "url": "https://learn.microsoft.com/en-us/surface/tech-specs/surface-laptop-ultra-1stedition",
+      "final_url": "https://learn.microsoft.com/en-us/surface/tech-specs/surface-laptop-ultra-1stedition",
+      "retrieved_at": "2026-11-25T02:54:54+00:00",
+      "sha256": "245acf8dd82f3ca329e59f0d9b08a4714c8f01a31908ac56a114da027edf91e0"
+    }
+  ],
+  "assets": [
+    {
+      "file": "surface-hero.jpg",
+      "url": "https://images.ctfassets.net/jy9s7k22hbg4/4KVqDIfm10HcC7B70bg5LR/5b81ac9612ddc0aad0b3c5c32f79d5b1/SLU_Hero_Mobile_Poster.jpg",
+      "final_url": "https://images.ctfassets.net/jy9s7k22hbg4/4KVqDIfm10HcC7B70bg5LR/5b81ac9612ddc0aad0b3c5c32f79d5b1/SLU_Hero_Mobile_Poster.jpg",
+      "content_type": "image/jpeg",
+      "bytes": 512216,
+      "sha256": "c46319d9c7ee5a0952465a892ea26624503230ea8d92c338824fdd4e9686474e"
+    },
+    {
+      "file": "surface-ai-screen.jpg",
+      "url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/31db1a9c563645038227c1a4751f4b3f",
+      "final_url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/31db1a9c563645038227c1a4751f4b3f",
+      "content_type": "image/jpeg",
+      "bytes": 287748,
+      "sha256": "843ae2232d064948cd0f6b739327cf4f972b53d884ac227429b85e8f3c7af97d"
+    },
+    {
+      "file": "surface-3d.jpg",
+      "url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/19d7e2d00c774ca682c076e9a4ecdcc6",
+      "final_url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/19d7e2d00c774ca682c076e9a4ecdcc6",
+      "content_type": "image/jpeg",
+      "bytes": 121694,
+      "sha256": "6eaab04ddac0ec1d6f3ff6b42a6e8249641ed77ec679daa72dd38b1dac6f1efe"
+    },
+    {
+      "file": "surface-display.jpg",
+      "url": "https://images.ctfassets.net/jy9s7k22hbg4/6YHTTbvGNwpu7x9WOcBLXn/e3b63b4345ecf51f98ad4012259a0e21/SLU_402_Display_Afternoon_Poster__2___1_.jpg",
+      "final_url": "https://images.ctfassets.net/jy9s7k22hbg4/6YHTTbvGNwpu7x9WOcBLXn/e3b63b4345ecf51f98ad4012259a0e21/SLU_402_Display_Afternoon_Poster__2___1_.jpg",
+      "content_type": "image/jpeg",
+      "bytes": 356667,
+      "sha256": "b764165ac5574868a7d0f48a0aecff0cbc5a340c4c6974654b31d7d785877629"
+    },
+    {
+      "file": "surface-ports.jpg",
+      "url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/23628a72eb7e4e33b2cae9f060234ff5",
+      "final_url": "https://media.ffycdn.net/us/microsoft-consumer-brands/d/23628a72eb7e4e33b2cae9f060234ff5",
+      "content_type": "image/jpeg",
+      "bytes": 71927,
+      "sha256": "abee42e96d22b756407287667213fdf8b7617e41d8fc8d050cea2b1929238175"
+    },
+    {
+      "file": "surface-serviceability.jpg",
+      "url": "https://images.ctfassets.net/jy9s7k22hbg4/3DixSEZZgkEs60Sfd7upM/34f71bba22e8999bab7470a3b3bbb3e1/SLU_600_Serviceability_Poster__2_.jpg",
+      "final_url": "https://images.ctfassets.net/jy9s7k22hbg4/3DixSEZZgkEs60Sfd7upM/34f71bba22e8999bab7470a3b3bbb3e1/SLU_600_Serviceability_Poster__2_.jpg",
+      "content_type": "image/jpeg",
+      "bytes": 317163,
+      "sha256": "f9c7ca5018ebe513d44d76a1bcf59df6921404ecbea744e78ff06daecf8adf2a"
+    }
+  ],
+  "verified_claims": [
+    "Microsoft positions Surface Laptop Ultra for local AI workloads and 3D graphics.",
+    "15-inch touchscreen; touch interaction only, with no pen input or Surface Pen compatibility.",
+    "Three USB-C ports, USB-A, HDMI, SD card reader, and 3.5 mm headphone jack.",
+    "Published repair guides and upgradeable storage; service options vary by market and time."
+  ],
+  "excluded_claims": [
+    "price",
+    "battery-life durations",
+    "performance numbers or comparisons"
+  ],
+  "rights": "Microsoft product imagery; no open license is implied. Confirm permission before external commercial publication."
 }

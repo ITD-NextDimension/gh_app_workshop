@@ -87,6 +87,8 @@ class Game:
         return safe
 
     def moves(self, start):
+        if self.winner:
+            return []
         return [[a, b] for b in range(10) for a in range(9)
                 if self.legal(start, (a, b))]
 

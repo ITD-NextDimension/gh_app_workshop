@@ -4,7 +4,7 @@
 
 **故事：** 小游戏赢得了同事的兴趣。接下来，工作室请你为 Surface Laptop Ultra 做一段适合手机观看的产品短片。你不负责发明产品参数，而是把有来源的事实讲清楚。
 
-预计 **45 分钟**。按照最终要求，本 Lab **只生成 HyperFrames 脚本和视频，不构建额外网页、播放界面或产品管理界面**。Python 负责模型调用、资料准备与规格核验；真正的渲染由 **HyperFrames CLI** 完成。
+按照最终要求，本 Lab **只生成 HyperFrames composition 和视频，不构建额外网页、播放界面或产品管理界面**。2026-11-25 复跑使用已核实的官方资料与手写分镜；Python 负责来源记录、素材准备和规格验收，真正的渲染由 **HyperFrames CLI** 完成。
 
 **目标：** `1080×1920`、`9:16`、`30fps`、`120 秒`，共 6 个各 20 秒的镜头；使用 `edge-tts` 的晓晓普通话女声合成旁白，并导出字幕文件。模型为 GPT-6 Luna，工作方式为 **Plan → 审阅 → Autopilot**。
 
@@ -31,15 +31,11 @@
 
 ## 步骤 2 · 把官网当作资料，不当作模型的想象空间
 
-打开指定 [Surface Laptop Ultra 官网](https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra)。核对产品名称、15 英寸触控屏与接口信息。官网变化时应重新核对，不沿用旧截图断言最新配置。
+打开指定 [Surface Laptop Ultra 官网](https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra) 和 [Microsoft Learn 技术规格](https://learn.microsoft.com/en-us/surface/tech-specs/surface-laptop-ultra-1stedition)。本轮复核确认正式名称为 Surface Laptop Ultra；15 英寸触控显示屏、三组 USB-C 接口及接口类型均以官方规格为据。技术规格明确不支持笔输入或 Surface Pen 兼容；维修部件与服务可用性会因市场和时间而异。
 
 课程素材中保留了页面 URL、获取时间和哈希；产品图片直接取自该官网，**不是用生成式图像画的假产品**。图片为 Microsoft 资产，不因放进教学包就获得开源授权；对外商业发布前请另行检查使用权。
 
-```bash
-python tools/fetch_sources.py
-```
-
-**检查：** `Lab2/Code/data/source.json` 和 `facts.json` 存在。该命令也更新 Lab 3 的公开财报表格，不访问私人数据。
+**检查：** 本轮运行 `python3 Lab2/Code/video.py prepare` 时，会重新读取两份官方网页并在 `Lab2/Code/data/source.json` 记录页面哈希、抓取时间、图像来源和 SHA-256。该流程不会更新 Lab 3 的文件。
 
 ![Playwright 截取的真实产品官网](screenshots/02-official-product.png)
 
@@ -47,7 +43,7 @@ python tools/fetch_sources.py
 
 检查 Plan 输出：总时长 120 秒，画面是 9:16，旁白分为 6 段与镜头对应，只使用已核实事实，不请求发布到社交平台。
 
-在 App 批准方案并切换 **Autopilot**，仍保持 **GPT-6 Luna**，发送：
+在 Review plan 选择 A 后，当前 App 会直接切换 **Autopilot** 并开始执行；保持 **GPT-6 Luna**。只有未启动时才发送：
 
 ```text
 批准这份计划。请生成 2 分钟普通话女声口播稿与可编辑的 HyperFrames 分镜，
@@ -56,19 +52,13 @@ python tools/fetch_sources.py
 并解码实际 MP4 的镜头截图，不能用 HTML 预览截图冒充成片。
 ```
 
-参考实现的等价 Python SDK 复现命令：
+此前的 SDK 复现脚本会生成历史 Plan/Autopilot 记录。本轮复跑使用经过来源核对的独立文件 `Lab2/Code/data/story-2026-11-25.json` 与 `narration-2026-11-25.txt`，保留旧的执行记录，不把旧模型轨迹冒充成本轮记录。
 
-```bash
-python Lab2/Code/story.py
-```
-
-这会保存真实 Plan 与 Autopilot 输出到 `Code/data/story.json`。脚本中的自动批准只针对本课程公开资料；课堂 App 操作应由学员先审阅计划，不能把自动批准误认为真人已经点击批准。
-
-**检查：** `plan_trace.mode` 为 `plan`，`trace.mode` 为 `autopilot`，两者的 `model` 都是 `gpt-6-luna`。六个标题写入镜头变量；六段口播稿写入 `data/narration.txt`，随后由 edge-tts 命令行合成音频。
+六个标题、旁白和事实来源已记录在带日期的复跑文件中；本轮不调用模型重写已核实的事实。
 
 ![包含镜头与真实模型记录的执行证据](screenshots/01-execution-record.png)
 
-以下是本次制作中另外完成的**原生验收计划**：先在 Plan 检查现有视频，再批准进入 Autopilot 运行 `probe`。截图能证明原生计划审阅与批准流程，但不是最初创作分镜的历史截图。验收计划还尝试 Canvas；截图中 Canvas 的未通过状态没有被隐藏。
+以下是历史实测中另外完成的**原生验收计划**：先在 Plan 检查现有视频，再批准进入 Autopilot 运行 `probe`。截图能证明原生计划审阅与批准流程，但不是最初创作分镜的历史截图。验收计划还尝试 Canvas；截图中 Canvas 的未通过状态没有被隐藏。
 
 ![真实 App 中等待批准的后续验收计划](screenshots/native-02-plan-approval.png)
 
@@ -79,21 +69,21 @@ python Lab2/Code/story.py
 业务编排、口播稿和 edge-tts 都由 Python 命令行驱动；HyperFrames 负责渲染。先安装 Python 依赖（包含固定版本 edge-tts），再安装官方渲染器依赖：
 
 ```bash
-python -m pip install -r requirements.txt --index-url https://packagefeedproxy.microsoft.io/pypi/simple/
+python3 -m venv Lab2/Code/.venv
+Lab2/Code/.venv/bin/python -m pip install -r requirements.txt --index-url https://packagefeedproxy.microsoft.io/pypi/simple/
 npm ci --prefix Lab2/Code --ignore-scripts --no-audit --no-fund --registry=https://packagefeedproxy.microsoft.io/npm/
-python Lab2/Code/story.py
-python Lab2/Code/video.py prepare
-python Lab2/Code/video.py voice
+Lab2/Code/.venv/bin/python Lab2/Code/video.py prepare
+Lab2/Code/.venv/bin/python Lab2/Code/video.py voice
 ```
 
-`story.py` 生成 Plan、六个镜头标题和与事实对应的普通话口播稿。`prepare` 下载官网产品图、带授权文件的 Noto Sans SC 字体，复制固定版本 GSAP，并把标题写入镜头。章节模板会按每个镜头生成独立、已填入正文的组合，避免复用组件时章节内容互相覆盖。`voice` 通过 edge-tts 命令行使用 `zh-CN-XiaoxiaoNeural`（普通话女声“晓晓”），生成 MP3 和 SRT。
+`prepare` 重新获取两份微软官方网页与产品图，记录页面和图像的 SHA-256，复制固定版本 GSAP，并把标题、官方图片路径写入镜头。章节模板按镜头生成独立组合。`voice` 通过 edge-tts 使用 `zh-CN-XiaoxiaoNeural`（普通话女声“晓晓”），生成带日期的 MP3 和 SRT；本轮脚本固定在 110–120 秒范围。
 
 等价的 edge-tts 命令为：
 
 ```bash
-python -m edge_tts --file Lab2/Code/data/narration.txt --voice zh-CN-XiaoxiaoNeural --rate=-5% \
-  --write-media Lab2/Code/film/assets/narration.mp3 \
-  --write-subtitles Lab2/Code/film/assets/narration.srt
+Lab2/Code/.venv/bin/python -m edge_tts --file Lab2/Code/data/narration-2026-11-25.txt --voice zh-CN-XiaoxiaoNeural --rate=-5% \
+  --write-media Lab2/Code/film/assets/narration-2026-11-25.mp3 \
+  --write-subtitles Lab2/Code/film/assets/narration-2026-11-25.srt
 ```
 
 脚本位置：
@@ -123,7 +113,7 @@ Lab2/Code/film/compositions/connections.html
 cd Lab2/Code/film
 npx --no-install hyperframes browser ensure
 npx --no-install hyperframes check --json
-npx --no-install hyperframes render --quality delivery --fps 30 --output output/surface-ultra.mp4
+npx --no-install hyperframes render --quality delivery --fps 30 --output output/surface-ultra-2026-11-25.mp4
 cd ../../..
 ```
 
@@ -132,7 +122,7 @@ cd ../../..
 不需要搭建播放页面。直接用系统播放器打开：
 
 ```text
-Lab2/Code/film/output/surface-ultra.mp4
+Lab2/Code/film/output/surface-ultra-2026-11-25.mp4
 ```
 
 ![从实际 MP4 解码的第二镜头：本地 AI 与 3D 图形](screenshots/05-video-ai.png)
@@ -142,10 +132,10 @@ Lab2/Code/film/output/surface-ultra.mp4
 回到课程根目录：
 
 ```bash
-python Lab2/Code/video.py probe
+Lab2/Code/.venv/bin/python Lab2/Code/video.py probe
 ```
 
-该命令调用 `ffprobe`，把结果保存到 `film/output/ffprobe.json`。通过条件是：
+该命令调用 `ffprobe`，把结果保存到 `film/output/ffprobe-2026-11-25.json`。通过条件是：
 
 | 项目 | 要求 |
 |---|---|
@@ -158,7 +148,7 @@ python Lab2/Code/video.py probe
 
 再在播放器分别查看 10、30、50、70、90、110 秒，并听取旁白。确认有文字、产品图、中文字体、六个主题和清晰中文女声；只有“文件存在”或“尺寸正确”还不够。
 
-本课程截图由 FFmpeg **解码最终 MP4**，不使用 HTML 预览截图冒充成片。用 `ffmpeg -v error -i Lab2/Code/film/output/surface-ultra.mp4 -f null -` 检查完整视频的 3600 帧均可解码。
+本课程截图由 FFmpeg **解码最终 MP4**，不使用 HTML 预览截图冒充成片。用 `ffmpeg -v error -i Lab2/Code/film/output/surface-ultra-2026-11-25.mp4 -f null -` 检查完整视频的 3600 帧均可解码。
 
 ![实际 MP4 第三镜头：15 英寸触控屏](screenshots/06-video-display.png)
 
@@ -172,4 +162,8 @@ python Lab2/Code/video.py probe
 
 中文方块：检查 `film/assets/NotoSansSC.ttf` 与 `@font-face`，不要只依赖讲师电脑的系统字体。画面开头为空：先跳到 1.5 秒再判断，因为入场动画从透明开始。整个镜头为空：检查 composition ID、timeline key 和镜头时长是否一致。
 
-**最终交付：** `film/` 下的可编辑脚本、素材来源、`assets/narration.mp3`、`assets/narration.srt`、`output/surface-ultra.mp4`、`ffprobe.json` 和真实成片截图。`data/story.json` 记录模型参与，`data/narration.txt` 保存合成脚本，不需要额外搭建任何界面。
+**最终交付：** `film/` 下的可编辑脚本、素材来源、`assets/narration-2026-11-25.mp3`、`assets/narration-2026-11-25.srt`、`output/surface-ultra-2026-11-25.mp4`、`ffprobe-2026-11-25.json` 和真实成片截图。分镜、核实过的事实及口播保存在带日期的 `data/` 文件中，不需要额外搭建任何界面。
+
+## 2026-11-25 最终验收
+
+当前源码重新渲染后，全片解码通过；音频平均 -19.8 dB、峰值 -2.2 dB。HyperFrames 检查无错误，19 项对比度检查通过（motion 检查未启用）。尺寸 1080×1920、30 fps、3600 帧、120.000 秒，H.264/AAC。旁白 111.336 秒。见 `Code/film/output/acceptance-2026-11-25.json` 的源码、素材和成片 SHA-256。未重复模型调用。

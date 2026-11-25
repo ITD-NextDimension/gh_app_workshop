@@ -5,12 +5,15 @@
 h1{font-size:84px;line-height:1.2;letter-spacing:-2px;font-weight:600}.rule{height:2px;width:100%;background:#567082;margin:56px 0}
 .subtitle{font-size:42px;line-height:1.65;color:#d8e2e9}.detail{font-size:31px;line-height:1.8;color:#b9c9d5;margin-top:54px}
 .callout{display:inline-block;padding:18px 24px;border:1px solid #567082;border-radius:40px;font-size:24px;color:#c2d6e3;margin-top:58px}
+.chapter-gallery{display:flex;gap:24px;width:856px;margin-top:48px}
+.chapter-image{flex:1;min-width:0;height:360px;object-fit:cover;border-radius:12px}
 .foot{position:absolute;bottom:192px;left:112px;font-size:22px;color:#b4c5d0}
 </style><div data-composition-id="chapter-ai" data-height="1920" data-width="1080" id="root">
-<div id="chapter-content"><p class="eyebrow">产品定位</p>
+<div id="chapter-content"><p class="eyebrow">微软官网定位</p>
 <h1 id="chapter-title">本地 AI 与 3D 图形</h1><div class="rule"></div>
-<p class="subtitle">为本地 AI 工作负载与三维图形创作而设计</p>
-<p class="detail">这里介绍产品定位，不承诺特定软件的运行速度或测试成绩。实际体验取决于应用、配置与使用方式。</p>
-<p class="callout">请以微软官网与具体应用的要求为准</p></div>
-<p class="foot">公开页面信息 · 教学示例</p></div>
-<script>const tl=gsap.timeline({paused:true});tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-ai"]=tl;</script></template>
+<p class="subtitle">面向本地 AI 工作负载与 3D 图形</p>
+<p class="detail">画面为产品场景示意，不是实机速度测试，也不代表性能保证。</p>
+<p class="callout">实际体验取决于配置、应用与工作负载</p></div>
+<div class="chapter-gallery"><img alt="Microsoft 官方 Surface Laptop Ultra 产品场景" class="chapter-image" src="assets/surface-ai-screen.jpg"/><img alt="Microsoft 官方 Surface Laptop Ultra 三维图形场景" class="chapter-image" src="assets/surface-3d.jpg"/></div>
+<p class="foot">来源：Microsoft Surface 官方产品页</p></div>
+<script>const tl=gsap.timeline({paused:true});const scene=document.getElementById("root").dataset.compositionId;const motion=scene==="chapter-ai"?[{scale:1.04,x:12},{scale:1.1,x:-12}]:scene==="chapter-workflow"?[{scale:1.02,y:12},{scale:1.07,y:-12}]:[{scale:1.12,x:0},{scale:1.01,x:0}];tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".chapter-image",motion[0],{...motion[1],duration:17,ease:"none",immediateRender:false},1);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-ai"]=tl;</script></template>

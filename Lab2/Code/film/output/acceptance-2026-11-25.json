@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-25",
+  "model_calls_repeated": false,
+  "render": "Final render completed after the last composition changes; no prepare or voice rerun in final acceptance.",
+  "full_decode": "ffmpeg -v error -i <dated MP4> -f null - : exit 0",
+  "audio": {
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.2
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1",
+        "duration": "120.000000",
+        "nb_frames": "3600"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0",
+        "duration": "120.000000",
+        "nb_frames": "5626"
+      }
+    ],
+    "format": {
+      "duration": "120.000000"
+    }
+  },
+  "hyperframes_check": "hyperframes-check-2026-11-25.json",
+  "contact_sheet": "contact-sheet-2026-11-25.jpg",
+  "sha256": {
+    "Lab2/Code/film/index.html": "4bc26776f61be632beaaf9c034118dec5b0cec6323e95d86a25f82e6bfd79397",
+    "Lab2/Code/film/compositions/chapter-ai.html": "488ddb7f184534d5f386302276915fd7901694632a9f0638e7083998b42dde42",
+    "Lab2/Code/film/compositions/chapter-repair.html": "b1db77f364ba925dd43a24bd87bb59c2658826ed4c6671dae86f1ceabbf76099",
+    "Lab2/Code/film/compositions/chapter-workflow.html": "f61d22d64bb3c8a5473313b8bde3cab25bc10a96573a39b9ff619397d9e4c755",
+    "Lab2/Code/film/compositions/chapter.html": "35550033307a77b3ab9b0aaffc79863f65b0defea67f3373d191a7ac9354477d",
+    "Lab2/Code/film/compositions/connections.html": "b24dab036b8fd37148a2999443e732ad44c033314609479250fd4a5ed13b2d03",
+    "Lab2/Code/film/compositions/display.html": "7da14e42690584db3cf7874cc11e6795495f999e6ded063bab309022e71cd04f",
+    "Lab2/Code/film/compositions/opening.html": "aea3433023131c54b6bc67245b43c78802dfedec4c42bea358b6b9bc76a8e02d",
+    "Lab2/Code/film/assets/GSAP-NOTICE.txt": "4011417e059defb0b61b0648ee7d7bd70983753213f1d68042a387c2a4231aca",
+    "Lab2/Code/film/assets/NotoSansSC.ttf": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    "Lab2/Code/film/assets/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "Lab2/Code/film/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "Lab2/Code/film/assets/narration-2026-11-25.mp3": "bea578fb491a67627a6ef810e3bb62d422dfa707d155ade4c79cdde45a581355",
+    "Lab2/Code/film/assets/narration-2026-11-25.srt": "0ebb2f21de07b6c7c01e16dad78f36dbbb313c71dda9e6c97355ab788d4ff491",
+    "Lab2/Code/film/assets/narration.mp3": "57bdac67a46f78a9692f67c8d1b58f84dd7f28ad77b74166cb7610fa1be79667",
+    "Lab2/Code/film/assets/narration.srt": "37b189c5742faa09bf0d6e7748029ccce7c89098bb08a13a31fee35c5dd83bb3",
+    "Lab2/Code/film/assets/source-2026-11-25.json": "4c329fae62e09a5933fe3befd247052c75b62490082bc4911aa0319607df27cf",
+    "Lab2/Code/film/assets/source.json": "28cc82f7386ef4f1a673da3156145f2a17914d3df9365eac0386998c8248e331",
+    "Lab2/Code/film/assets/surface-3d.jpg": "6eaab04ddac0ec1d6f3ff6b42a6e8249641ed77ec679daa72dd38b1dac6f1efe",
+    "Lab2/Code/film/assets/surface-ai-screen.jpg": "843ae2232d064948cd0f6b739327cf4f972b53d884ac227429b85e8f3c7af97d",
+    "Lab2/Code/film/assets/surface-display.jpg": "b764165ac5574868a7d0f48a0aecff0cbc5a340c4c6974654b31d7d785877629",
+    "Lab2/Code/film/assets/surface-hero.jpg": "c46319d9c7ee5a0952465a892ea26624503230ea8d92c338824fdd4e9686474e",
+    "Lab2/Code/film/assets/surface-ports.jpg": "abee42e96d22b756407287667213fdf8b7617e41d8fc8d050cea2b1929238175",
+    "Lab2/Code/film/assets/surface-serviceability.jpg": "f9c7ca5018ebe513d44d76a1bcf59df6921404ecbea744e78ff06daecf8adf2a",
+    "Lab2/Code/film/output/surface-ultra-2026-11-25.mp4": "176e4b5159a565a029606e0335f6140a421f8fb3f1eeaeb9274a656beb8f88e9"
+  }
+}

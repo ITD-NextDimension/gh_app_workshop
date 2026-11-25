@@ -4,12 +4,14 @@
 *{box-sizing:border-box;margin:0}.eyebrow{font-size:24px;letter-spacing:7px;color:#bdcddd;margin-bottom:72px}
 .number{font-size:220px;color:#b5d4e7;line-height:1.1;margin-top:62px}.number span{font-size:44px}
 h2{font-size:82px;line-height:1.25;margin-top:45px;letter-spacing:-2px}.subtitle{font-size:32px;line-height:1.8;color:#c5d1db;margin-top:34px}
-.badge{display:inline-block;padding:14px 20px;border:1px solid #567082;border-radius:40px;font-size:23px;color:#c2d6e3;margin-top:50px}
+.display-visual{display:block;width:856px;height:470px;object-fit:cover;border-radius:12px;margin-top:52px}
+.badge{display:inline-block;padding:14px 20px;border:1px solid #567082;border-radius:40px;font-size:23px;color:#c2d6e3;margin-top:32px}
 .foot{position:absolute;bottom:192px;left:112px;font-size:22px;line-height:1.8;color:#b4c5d0}
 </style><div id="root" data-composition-id="display" data-width="1080" data-height="1920"
 data-composition-variables='[{"id":"headline","type":"string","label":"标题","default":"15英寸触控屏"}]'>
 <div id="display-content"><p class="eyebrow">SPACE TO CREATE</p><div class="number">15<span>英寸</span></div>
-<h2 id="display-title" data-var-text="headline">15英寸触控屏</h2><p class="subtitle">触控显示屏<br>更直观地浏览、标记与创作</p>
-<div class="badge">本地 AI 工作负载 · 3D 图形</div></div>
-<p class="foot">功能和配置因市场而异<br>未作性能、价格或续航承诺</p></div>
-<script>const tl=gsap.timeline({paused:true});tl.fromTo("#display-content",{opacity:0,y:45},{opacity:1,y:0,duration:.8,ease:"power3.out"},0);window.__timelines.display=tl;</script></template>
+<h2 id="display-title" data-var-text="headline">15英寸触控屏</h2><p class="subtitle">为直接触控操作而优化</p>
+<img class="display-visual" src="assets/surface-display.jpg" alt="Microsoft 官方 Surface Laptop Ultra 显示屏场景"/>
+<div class="badge">触控显示屏 · 不支持笔输入</div></div>
+<p class="foot">来源：Microsoft Learn 技术规格</p></div>
+<script>const tl=gsap.timeline({paused:true});tl.fromTo("#display-content",{opacity:0,y:45},{opacity:1,y:0,duration:.8,ease:"power3.out"},0);tl.fromTo(".display-visual",{scale:1.08,x:-14},{scale:1.02,x:12,duration:16,ease:"none"},1);window.__timelines.display=tl;</script></template>

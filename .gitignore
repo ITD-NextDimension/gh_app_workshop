@@ -15,3 +15,8 @@ verification/
 Lab4/screenshots/02-outlook-sign-in.png
 Lab4/screenshots/09-live-validation.png
 Lab4/Code/output/live-evidence.html
+
+# Interrupted HyperFrames render workspaces
+**/.hf-transaction-*/
+**/.*.hf-transaction-*/
+Lab2/Code/film/output/work-*/

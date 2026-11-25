@@ -5,12 +5,15 @@
 h1{font-size:84px;line-height:1.2;letter-spacing:-2px;font-weight:600}.rule{height:2px;width:100%;background:#567082;margin:56px 0}
 .subtitle{font-size:42px;line-height:1.65;color:#d8e2e9}.detail{font-size:31px;line-height:1.8;color:#b9c9d5;margin-top:54px}
 .callout{display:inline-block;padding:18px 24px;border:1px solid #567082;border-radius:40px;font-size:24px;color:#c2d6e3;margin-top:58px}
+.chapter-gallery{display:flex;gap:24px;width:856px;margin-top:48px}
+.chapter-image{flex:1;min-width:0;height:360px;object-fit:cover;border-radius:12px}
 .foot{position:absolute;bottom:192px;left:112px;font-size:22px;color:#b4c5d0}
 </style><div data-composition-id="chapter-repair" data-height="1920" data-width="1080" id="root">
 <div id="chapter-content"><p class="eyebrow">维修与升级</p>
-<h1 id="chapter-title">维修指引与可升级存储</h1><div class="rule"></div>
-<p class="subtitle">官网提到维修指引与可升级存储</p>
-<p class="detail">是否提供相关功能或服务，会因市场与销售地区而异；购买或维修前请确认本地信息。</p>
-<p class="callout">不推断未说明的维修难度、费用或升级规格</p></div>
-<p class="foot">以 Microsoft Surface 官网最新说明为准</p></div>
-<script>const tl=gsap.timeline({paused:true});tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-repair"]=tl;</script></template>
+<h1 id="chapter-title">可维护设计</h1><div class="rule"></div>
+<p class="subtitle">维修指南 · 可升级存储</p>
+<p class="detail">微软说明零件与服务选项因产品、市场和时间而异。</p>
+<p class="callout">购买或维修前核对本地官方信息</p></div>
+<div class="chapter-gallery"><img alt="Microsoft 官方 Surface Laptop Ultra 产品场景" class="chapter-image" src="assets/surface-serviceability.jpg"/></div>
+<p class="foot">来源：Microsoft Surface 官方产品页</p></div>
+<script>const tl=gsap.timeline({paused:true});const scene=document.getElementById("root").dataset.compositionId;const motion=scene==="chapter-ai"?[{scale:1.04,x:12},{scale:1.1,x:-12}]:scene==="chapter-workflow"?[{scale:1.02,y:12},{scale:1.07,y:-12}]:[{scale:1.12,x:0},{scale:1.01,x:0}];tl.fromTo(".eyebrow",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},0);tl.fromTo("#chapter-title",{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:"power3.out"},1.5);tl.fromTo(".rule",{scaleX:0,transformOrigin:"left center"},{scaleX:1,duration:1,ease:"power2.out"},3);tl.fromTo(".subtitle",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},5);tl.fromTo(".detail",{opacity:0,y:24},{opacity:1,y:0,duration:.7,ease:"power3.out"},8);tl.fromTo(".callout",{opacity:0,y:16},{opacity:1,y:0,duration:.7,ease:"power3.out"},12);tl.fromTo(".chapter-image",motion[0],{...motion[1],duration:17,ease:"none",immediateRender:false},1);tl.fromTo(".foot",{opacity:0},{opacity:1,duration:.6},14);window.__timelines["chapter-repair"]=tl;</script></template>
