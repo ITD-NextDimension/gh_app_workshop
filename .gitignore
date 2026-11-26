@@ -20,3 +20,7 @@ Lab4/Code/output/live-evidence.html
 **/.hf-transaction-*/
 **/.*.hf-transaction-*/
 Lab2/Code/film/output/work-*/
+
+# HyperFrames Studio preview caches
+**/.thumbnails/
+**/.waveform-cache/
