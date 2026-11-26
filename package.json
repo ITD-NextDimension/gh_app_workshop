@@ -1,5 +1,5 @@
 {
-  "name": "hol-ghc-app",
+  "name": "gh-app-workshop",
   "private": true,
   "type": "module",
   "scripts": {

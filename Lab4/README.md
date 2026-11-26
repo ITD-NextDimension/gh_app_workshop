@@ -129,8 +129,7 @@ python Lab4/Code/canvas_smoke.py
 使用会话级 Canvas 扩展，不要安装到我的全局目录。
 先调用 extensions_manage guide 并读取它提供的 extensions.md 与 canvas.d.ts，
 确认当前版本接口，再检查 Lab4/Code/canvas-extension/extension.mjs。
-使用当前本地 CLI 会话的真实 UUID（不是项目 ID，也不是项目会话 ID），
-运行 python Lab4/Code/install_canvas.py --session-id "<当前本地 CLI 会话 UUID>"。
+运行 python Lab4/Code/install_canvas.py（不带参数：它会在 ~/.copilot/session-state 中自动找到正在课程根目录运行的当前会话）。
 然后 extensions_reload，list、inspect，检查扩展 hol-weekboard。
 用 list_canvas_capabilities 检查 hol-weekboard，
 用 open_canvas 打开 document_id=weekly-demo、instanceId=weekly-main。

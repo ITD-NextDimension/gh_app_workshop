@@ -10,9 +10,33 @@
 
 所有命令默认在课程根目录执行；步骤 5 会明确进入 `film` 目录。
 
+## 步骤 0 · 先教会 Copilot 做视频：安装 HyperFrames Skills
+
+**为什么：** 提示词只描述“要什么”；Skill 是可复用的“做法说明书”，告诉 Copilot HyperFrames 的规则（时间轴注册、`data-*` 属性、渲染与检查命令）。`Lab2/Code/film/AGENTS.md` 也要求先用 Skills 再改 composition。
+
+在终端运行（macOS 与 Windows PowerShell 命令相同）：
+
+```bash
+copilot plugin marketplace add heygen-com/hyperframes
+copilot plugin install hyperframes@hyperframes
+copilot plugin list
+```
+
+然后在 App 打开 **Customize**，确认能看到 `hyperframes` 的 Skills。看不到时先重启 App；仍看不到再在 `Lab2/Code/film` 目录运行 `npx hyperframes skills update`（项目内安装）。
+
+| Skill | 管什么 | 本 Lab 是否用到 |
+|---|---|---|
+| `/hyperframes` | 总入口：判断该走哪个工作流 | 是 |
+| `/product-launch-video` | 把产品网页变成产品介绍视频 | 是 |
+| `/hyperframes-cli` | `check`、`render` 等命令行用法 | 是 |
+| `/hyperframes-audio` | 旁白与背景音乐 | 可选 |
+| `/media-use` | 产品图片与素材的处理方式 | 可选 |
+
+**检查：** `copilot plugin list` 列出 `hyperframes`，App 的 Customize 里能看到它的 Skills。
+
 ## 步骤 1 · 把任务交给“导演”，而不是立即开工
 
-在 App 新建本地会话，选择 **Plan** 和 **GPT-6 Luna**。输入：
+在 App 新建本地会话。**新会话会沿用上一次的模式**，发送前先确认模式按钮显示 **Plan**、输入框边框为蓝色，模型为 **GPT-6 Luna**。输入：
 
 ```text
 请先规划，不要执行。
@@ -21,6 +45,7 @@
 共 6 个镜头、每个 20 秒，加入 edge-tts 的 zh-CN-XiaoxiaoNeural 普通话女声旁白。
 先给我分镜、来源核对、需要下载的素材、旁白脚本与命令行执行步骤和验收标准。
 不要制作播放网页或额外界面，不要添加未经核实的价格、续航或性能数字。
+规划前先调用 /hyperframes skill，确认应走 /product-launch-video 工作流，并在计划里写明会用到哪些 skill。
 ```
 
 **检查：** 此时得到的是方案，不是最终视频。你应能回答“给谁看、几个镜头、使用哪些事实、最后如何验证”。
@@ -46,10 +71,11 @@
 在 Review plan 选择 A 后，当前 App 会直接切换 **Autopilot** 并开始执行；保持 **GPT-6 Luna**。只有未启动时才发送：
 
 ```text
-批准这份计划。请生成 2 分钟普通话女声口播稿与可编辑的 HyperFrames 分镜，
+批准这份计划。先调用 /hyperframes，再按 /product-launch-video 的流程生成 2 分钟普通话女声口播稿与可编辑的 HyperFrames 分镜；渲染和检查使用 /hyperframes-cli。
 用 edge-tts 的 zh-CN-XiaoxiaoNeural 从文本脚本合成旁白，并通过 CLI 导出带音轨 MP4。
 共 6 个 20 秒镜头。不要制作额外界面。完成后检查真实视频的尺寸、时长、帧率和音轨，
 并解码实际 MP4 的镜头截图，不能用 HTML 预览截图冒充成片。
+在回复里列出你实际调用了哪些 skill。
 ```
 
 此前的 SDK 复现脚本会生成历史 Plan/Autopilot 记录。本轮复跑使用经过来源核对的独立文件 `Lab2/Code/data/story-2026-11-25.json` 与 `narration-2026-11-25.txt`，保留旧的执行记录，不把旧模型轨迹冒充成本轮记录。

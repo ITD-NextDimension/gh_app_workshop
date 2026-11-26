@@ -253,3 +253,63 @@ def test_persistent_completion_and_invalid_input(tmp_path):
         store.complete("a", "yes")
     with pytest.raises(ValueError):
         store.complete("missing", True)
+
+
+canvas_installer = load("install_canvas", "Lab4/Code/install_canvas.py")
+SESSION_A = "11111111-1111-4111-8111-111111111111"
+SESSION_B = "22222222-2222-4222-8222-222222222222"
+
+
+def fake_session(home, uuid, cwd, pid, mtime):
+    import os
+    session = home / "session-state" / uuid
+    session.mkdir(parents=True)
+    (session / "workspace.yaml").write_text(f"id: {uuid}\ncwd: {cwd}\nclient_name: github/autopilot\n")
+    (session / "events.jsonl").write_text("{}\n")
+    (session / f"inuse.{pid}.lock").write_text("")
+    os.utime(session / "events.jsonl", (mtime, mtime))
+    os.utime(session / "workspace.yaml", (mtime, mtime))
+    return session
+
+
+def test_canvas_finds_the_live_session_in_course_root(tmp_path):
+    course, other = tmp_path / "course", tmp_path / "other"
+    course.mkdir(), other.mkdir()
+    home = tmp_path / "copilot"
+    fake_session(home, SESSION_A, course, 101, 1_000)
+    fake_session(home, SESSION_B, other, 102, 2_000)       # another folder
+    fake_session(home, "33333333-3333-4333-8333-333333333333", course, 999, 3_000)  # dead pid
+    alive = lambda pid: pid in (101, 102)
+    assert canvas_installer.find_session(home, course, alive) == SESSION_A
+
+
+def test_canvas_prefers_the_session_written_most_recently(tmp_path):
+    course = tmp_path / "course"
+    course.mkdir()
+    home = tmp_path / "copilot"
+    fake_session(home, SESSION_A, course, 101, 1_000)
+    fake_session(home, SESSION_B, course, 102, 1_600)
+    assert canvas_installer.find_session(home, course, lambda pid: True) == SESSION_B
+
+
+def test_canvas_refuses_when_no_session_or_a_tie(tmp_path):
+    course = tmp_path / "course"
+    course.mkdir()
+    home = tmp_path / "copilot"
+    (home / "session-state").mkdir(parents=True)
+    with pytest.raises(ValueError, match="没有找到"):
+        canvas_installer.find_session(home, course, lambda pid: True)
+    fake_session(home, SESSION_A, course, 101, 1_000)
+    fake_session(home, SESSION_B, course, 102, 1_002)
+    with pytest.raises(ValueError, match="多个会话"):
+        canvas_installer.find_session(home, course, lambda pid: True)
+
+
+def test_canvas_installs_into_session_only(tmp_path):
+    home = tmp_path / "copilot"
+    (home / "session-state" / SESSION_A).mkdir(parents=True)
+    target = canvas_installer.install(SESSION_A, home)
+    assert (target / "extension.mjs").is_file()
+    assert json.loads((target / "config.json").read_text())["bridge"].endswith("bridge.py")
+    with pytest.raises(FileExistsError):
+        canvas_installer.install(SESSION_A, home)

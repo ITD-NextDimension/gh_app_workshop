@@ -67,7 +67,7 @@ test("language switches, navigation, assets and anchors resolve under a project 
                 assert.match(html, /搜尋課程/);
                 assert.match(html, /切換深色主題/);
             }
-            const base = new URL(relative, "https://example.com/hol_ghc_app/");
+            const base = new URL(relative, "https://example.com/gh_app_workshop/");
             const search = JSON.parse(html.match(/window\.HOL_PAGES=(\[[\s\S]*?\]);/)[1]);
             assert.equal(search.length, 5);
             assert.ok(search.every(result => result.locale === locale));
@@ -76,8 +76,8 @@ test("language switches, navigation, assets and anchors resolve under a project 
             for (const link of links) {
                 const url = new URL(link, base);
                 if (url.origin !== base.origin) continue;
-                assert.ok(url.pathname.startsWith("/hol_ghc_app/"), `${relative}: ${link}`);
-                const target = path.join(site, decodeURIComponent(url.pathname.slice("/hol_ghc_app/".length)));
+                assert.ok(url.pathname.startsWith("/gh_app_workshop/"), `${relative}: ${link}`);
+                const target = path.join(site, decodeURIComponent(url.pathname.slice("/gh_app_workshop/".length)));
                 await access(target);
                 if (url.hash) {
                     const targetHtml = await readFile(target, "utf8");
