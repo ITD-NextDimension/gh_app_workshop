@@ -47,7 +47,7 @@ def build_all():
         ("Plan 阶段实际记录", {"trace": trace_short(story["plan_trace"]), "plan": story["plan"]}),
         ("Autopilot 阶段实际记录", {"trace": trace_short(story["trace"]), "execution": story["execution"]}),
         ("最终 MP4 实测规格", probe),
-        ("来源与边界", "素材：Microsoft Surface Laptop Ultra 官网\n渲染：HyperFrames 0.8.171；不是用 Playwright 录屏冒充。\n声音：本教学版为 12 秒无声视频。\n官网产品图片不是开源授权素材。"),
+        ("来源与边界", "素材：Microsoft Surface Laptop Ultra 官网\n渲染：HyperFrames 0.8.171；不是用 Playwright 录屏冒充。\n声音：edge-tts zh-CN-XiaoxiaoNeural 普通话女声旁白；成片为 120 秒、1080×1920、30fps。\n官网产品图片不是开源授权素材。"),
     ])
     analysis = json.loads((ROOT / "Lab3/Code/output/analysis.json").read_text())
     render("Lab3", "一个 Agent，三条财报观察", [

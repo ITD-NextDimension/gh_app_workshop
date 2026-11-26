@@ -11,7 +11,7 @@ const labs = [
         "03-generated-game.png", "04-legal-target.png", "05-first-move.png", "06-undo.png", "07-mobile.png",
     ] },
     { id: "lab-02", label: "Lab 02 · 两分钟产品短片", source: "Lab2/README.md", screenshots: [
-        "04-video-opening.png", "05-video-display.png", "06-video-display.png",
+        "04-video-opening.png", "05-video-ai.png", "06-video-display.png",
         "07-video-workflow.png", "08-video-ports.png", "09-video-repair.png",
     ] },
     { id: "lab-03", label: "Lab 03 · 经营观察室", source: "Lab3/README.md", screenshots: [

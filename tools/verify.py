@@ -96,7 +96,9 @@ def main():
             page.set_viewport_size({"width": 1440, "height": 1000})
             report["checks"].append("Lab1 generated HTML: 90 positions, 32 pieces, legal hint, move, undo, reset, mobile")
             page.set_viewport_size({"width": 1080, "height": 1920})
-            for t, name in ((1.5, "04-video-opening.png"), (5.5, "05-video-display.png"), (9.5, "06-video-ports.png")):
+            for t, name in ((10, "04-video-opening.png"), (30, "05-video-ai.png"),
+                            (50, "06-video-display.png"), (70, "07-video-workflow.png"),
+                            (90, "08-video-ports.png"), (110, "09-video-repair.png")):
                 frame = ROOT / f"Lab2/Code/film/output/frame-{t}.png"
                 subprocess.run(["ffmpeg", "-v", "error", "-ss", str(t), "-i",
                     str(ROOT / "Lab2/Code/film/output/surface-ultra.mp4"),
@@ -105,7 +107,7 @@ def main():
                 assert page.locator("img").evaluate("img=>img.naturalWidth===1080&&img.naturalHeight===1920")
                 page.locator("img").screenshot(path=str(ROOT / "Lab2/screenshots" / name))
             page.set_viewport_size({"width": 1440, "height": 1000})
-            report["checks"].append("Lab2 CLI-rendered MP4: three real decoded frames at 1080x1920; no custom player UI")
+            report["checks"].append("Lab2 CLI-rendered MP4: six real decoded frames (one per 20s scene) at 1080x1920; no custom player UI")
             page.goto("http://127.0.0.1:8013/")
             expect(page.locator("#cards")).to_contain_text("281,724")
             expect(page.locator("#findings .finding")).to_have_count(3)
@@ -150,7 +152,7 @@ def main():
     subprocess.run(["ffmpeg", "-v", "error", "-i",
         str(ROOT / "Lab2/Code/film/output/surface-ultra.mp4"), "-f", "null", "-"],
         check=True, capture_output=True)
-    report["checks"].append("All 360 final MP4 frames decode without errors")
+    report["checks"].append("All 3600 final MP4 frames decode without errors")
     (ROOT / "verification/playwright.json").write_text(json.dumps(report, ensure_ascii=False, indent=2))
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
