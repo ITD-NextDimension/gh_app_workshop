@@ -28,11 +28,15 @@ copilot plugin list
 
 | Skill | 管什麼 | 本 Lab 是否用到 |
 |---|---|---|
-| `/hyperframes` | 總入口：判斷該走哪個工作流 | 是 |
-| `/product-launch-video` | 把產品網頁變成產品介紹影片 | 是 |
-| `/hyperframes-cli` | `check`、`render` 等命令列用法 | 是 |
-| `/hyperframes-audio` | 旁白與背景音樂 | 可選 |
-| `/media-use` | 產品圖片與素材的處理方式 | 可選 |
+| `/hyperframes` | 總入口：判斷該走哪個工作流，講清 composition、時間軸和 `data-*` 規則 | 是 |
+| `/hyperframes-cli` | `check`、`preview`、`render` 等命令列用法 | 是 |
+| `/media-use` | 產品圖片與素材的處理方式 | 是 |
+| `/hyperframes-registry` | 安裝現成的動畫塊和元件 | 可選 |
+| `/figma`、`/slideshow`、`/remotion-to-hyperframes`、`/reverse-any-video`、`/style-sampling` | 其他場景 | 否 |
+
+以上是 hyperframes 擴充功能 v0.9.96 安裝的 9 個 Skills。`Lab2/Code/film/AGENTS.md` 由更新版本的 HyperFrames 生成，裡面提到的 `/product-launch-video`、`/hyperframes-audio` 等在這個版本中**不存在**；App 顯示 “Failed to load skill” 時不必處理。
+
+**注意：** hyperframes 的 Skill 執行時可能傳送一條 Skill 使用統計（Copilot 會在對話裡提示，登入狀態下可能關聯帳戶）。不希望傳送時，直接回復“不傳送”。
 
 **檢查：** `copilot plugin list` 列出 `hyperframes`，App 的 Customize 裡能看到它的 Skills。
 
@@ -47,7 +51,7 @@ copilot plugin list
 共 6 個鏡頭、每個 20 秒，加入 edge-tts 的 zh-CN-XiaoxiaoNeural 普通話女聲旁白。
 先給我分鏡、來源核對、需要下載的素材、旁白腳本與命令列執行步驟和驗收標準。
 不要製作播放網頁或額外介面，不要新增未經核實的價格、續航或效能數字。
-規劃前先呼叫 /hyperframes skill，確認應走 /product-launch-video 工作流，並在計劃裡寫明會用到哪些 skill。
+規劃前先呼叫 /hyperframes skill，確認適用的工作流，並在計劃裡寫明會用到哪些 skill。
 ```
 
 **檢查：** 此時得到的是方案，不是最終影片。你應能回答“給誰看、幾個鏡頭、使用哪些事實、最後如何驗證”。
@@ -77,7 +81,7 @@ python tools/fetch_sources.py
 在 App 批准方案並切換 **Autopilot**，仍保持 **GPT-6 Luna**，傳送：
 
 ```text
-批准這份計劃。先呼叫 /hyperframes，再按 /product-launch-video 的流程生成 2 分鐘普通話女聲口播稿與可編輯的 HyperFrames 分鏡；渲染和檢查使用 /hyperframes-cli。
+批准這份計劃。先呼叫 /hyperframes，按它給出的流程生成 2 分鐘普通話女聲口播稿與可編輯的 HyperFrames 分鏡；產品圖片用 /media-use，渲染和檢查使用 /hyperframes-cli。
 用 edge-tts 的 zh-CN-XiaoxiaoNeural 從文字腳本合成旁白，並通過 CLI 匯出帶音軌 MP4。
 共 6 個 20 秒鏡頭。不要製作額外介面。完成後檢查真實影片的尺寸、時長、幀率和音軌，
 並解碼實際 MP4 的鏡頭截圖，不能用 HTML 預覽截圖冒充成片。
